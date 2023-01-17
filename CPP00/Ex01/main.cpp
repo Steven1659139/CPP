@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: stevenlavoie <stevenlavoie@student.42.f    +#+  +:+       +#+        */
+/*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 16:04:29 by stevenlavoi       #+#    #+#             */
-/*   Updated: 2023/01/13 19:48:33 by stevenlavoi      ###   ########.fr       */
+/*   Updated: 2023/01/17 15:52:25 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,11 @@ int main()
 
     while(1)
     {
-        std::cout << "Entrée: ";
+        std::cout << "\x1b[32mEntrée: \033[0m";
         std::getline(std::cin, command);
 
+        // if (command == "\0")
+        //     return 0;
         if (command == "ADD")
             Book.add_data();
         else if (command == "SEARCH")
