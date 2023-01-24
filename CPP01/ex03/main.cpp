@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 16:02:00 by slavoie           #+#    #+#             */
-/*   Updated: 2023/01/23 19:11:00 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/01/23 23:32:11 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ int main(){
 		HumanA bob("Bob", club);
 		bob.attack();
 		club.setType("some other type of club");
-		// std::cout << club.getType() << std::endl;
 		bob.attack();
 	}
 	{
@@ -31,7 +30,5 @@ int main(){
 		club.setType("some other type of club");
 		jim.attack();
 	}
-
-
 	return 0;
 }

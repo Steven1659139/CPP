@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 21:40:20 by slavoie           #+#    #+#             */
-/*   Updated: 2023/01/23 23:04:37 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/01/23 23:33:17 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,9 @@
 
 class Harl {
 	private:
-
 		static void (Harl::*functions[4])(void);
         static std::string levels[4];
 
-		
 		void debug();
 		void info();
 		void warning();

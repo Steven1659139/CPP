@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 15:23:59 by slavoie           #+#    #+#             */
-/*   Updated: 2023/01/23 15:48:54 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/01/23 23:31:30 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,4 @@ int main(){
 	std::cout << "Brain value:     " << Brain << std::endl;
 	std::cout << "stringPTR value: " << *stringPTR << std::endl;
 	std::cout << "stringREF value: " << stringREF << std::endl;
-
-	
-
-
-
 }

@@ -1,8 +1,0 @@
-
-- implémenter un classe Zombie avec un attribut privée name de type string
-- fonction void announce( void ) Foo: BraiiiiiiinnnzzzZ...
-• Zombie* newZombie( std::string name );
-Crée un zombie, lui donne un nom et le retourne afin qu’il puisse être utilisé en
-dehors de la portée de la fonction.
-• void randomChump( std::string name );
-Crée un zombie, lui donne un nom et le fait se présenter.
