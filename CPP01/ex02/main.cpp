@@ -6,12 +6,11 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 15:23:59 by slavoie           #+#    #+#             */
-/*   Updated: 2023/01/23 15:41:37 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/01/23 15:48:54 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string>
-#include <stdlib.h> 
 #include <iostream>
 
 int main(){

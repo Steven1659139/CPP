@@ -1,29 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.hpp                                         :+:      :+:    :+:   */
+/*   replace.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/23 16:16:26 by slavoie           #+#    #+#             */
-/*   Updated: 2023/01/23 19:07:39 by slavoie          ###   ########.fr       */
+/*   Created: 2023/01/23 19:56:14 by slavoie           #+#    #+#             */
+/*   Updated: 2023/01/23 20:33:25 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.hpp"
+#include <iostream>
+#include <fstream>
+#include <string>
 
-class HumanA{
-
-	public:
-
-		HumanA(std::string name, Weapon& weapon);
-		~HumanA(void);
-
-		void attack();
-	private:
-		std::string _name;
-		Weapon& _weapon;
-
-
-
-};
+int	replace(std::string infile, std::string s1, std::string s2);

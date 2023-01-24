@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 21:45:18 by slavoie           #+#    #+#             */
-/*   Updated: 2023/01/23 23:25:10 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/01/23 23:23:28 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,23 @@ void Harl::defaultFunction() {
 	std::cout << "Invalid level" << std::endl;
 }
 
-void Harl::complain(std::string level)
- {
-        for (int i = 0; i < 4; i++) {
-            if(levels[i] == level) {
-                (this->*functions[i])();
-                return;
+void Harl::complain(std::string level) {
+    std::string levels[4] = { "debug", "info", "warning", "error"};
+    for (int i = 0; i < 4; i++) {
+        if(levels[i] == level) {
+            switch (i) {
+                case 0:
+                    debug();
+                case 1:
+                    info();
+                case 2:
+                    warning();
+                case 3:
+                    error();
+                    break;
             }
-        }        
-	defaultFunction();
+            return;
+        }
+    }
+    std::cout << "Invalid level" << std::endl;
 }

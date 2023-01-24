@@ -1,10 +1,10 @@
-NAME = Weapon
+NAME = Harlfilter
 
 CPPFLAGS = -std=c++98 -Wall -Werror -Wextra
 CC = c++
-SRCS = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
+SRCS = main.cpp Harl.cpp
 
-INC = Weapon.hpp HumanA.hpp HumanB.hpp
+INC = Harl.hpp
 
 OBJS = $(SRCS:.cpp=.o)
 
