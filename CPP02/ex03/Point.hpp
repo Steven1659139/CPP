@@ -1,27 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   Point.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/24 13:31:51 by slavoie           #+#    #+#             */
-/*   Updated: 2023/01/24 22:10:28 by slavoie          ###   ########.fr       */
+/*   Created: 2023/01/27 10:27:19 by slavoie           #+#    #+#             */
+/*   Updated: 2023/01/27 15:32:36 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#include "Fixed.hpp"
 
-class Fixed {
+class Point
+{
 	private:
-		int value;
-		static const int fractionalBits = 8;
+		Fixed const _x;
+		Fixed const _y;
 
 	public:
-		Fixed();
-		Fixed(const Fixed &other);
-		Fixed &operator=(const Fixed &rhs);
-		~Fixed();
-		int getRawBits() const;
-		void setRawBits(int raw);
+		Point();
+		~Point();
+		Point(Point &src);
+		Point(const float x, const float y);
+		float getX() const;
+		float getY() const;
+		Point &operator=(const Point &rhs);
+
+
 };
+
+bool bsp( Point const a, Point const b, Point const c, Point const point);
+std::ostream &    operator<<(std::ostream & input, Point const & i);

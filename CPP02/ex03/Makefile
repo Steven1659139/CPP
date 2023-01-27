@@ -1,10 +1,10 @@
 NAME = Fixed
 
-CPPFLAGS = -std=c++98 -Wall -Werror -Wextra
+CPPFLAGS = -std=c++98 -Wall -Werror -Wextra -g
 CC = c++
-SRCS = main.cpp Fixed.cpp
+SRCS = main.cpp Fixed.cpp Point.cpp bsp.cpp 
 
-INC = Fixed.hpp
+INC = Fixed.hpp Point.hpp
 
 OBJS = $(SRCS:.cpp=.o)
 
