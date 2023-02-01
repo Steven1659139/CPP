@@ -6,9 +6,12 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 16:16:26 by slavoie           #+#    #+#             */
-/*   Updated: 2023/01/23 23:31:52 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/02/01 17:24:50 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef HUMANA_HPP
+#define HUMANA_HPP
 
 #include "Weapon.hpp"
 
@@ -23,3 +26,5 @@ class HumanA{
 		std::string _name;
 		Weapon& _weapon;
 };
+
+#endif

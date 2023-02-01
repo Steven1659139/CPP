@@ -6,9 +6,13 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 21:40:20 by slavoie           #+#    #+#             */
-/*   Updated: 2023/01/23 23:04:37 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/02/01 17:35:42 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef HARL_HPP
+#define HARL_HPP
+
 
 #include <iostream>
 #include <string>
@@ -29,3 +33,4 @@ class Harl {
 public:
     void complain(std::string level);
 };
+#endif

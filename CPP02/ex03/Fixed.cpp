@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 10:27:06 by slavoie           #+#    #+#             */
-/*   Updated: 2023/01/27 10:27:08 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/01/27 19:51:54 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,27 +15,34 @@
 
 Fixed::Fixed() : value(0) 
 {
+	std::cout << "Default Fixed constructor call" << std::endl;
 }
 
 Fixed::Fixed(const Fixed &rhs)
 {
+	std::cout << "Copy Fixed constructor call" << std::endl;
 	*this = rhs;
 }
 
 Fixed::Fixed(const int n) : value(n << Fixed::fractionalBits) 
 {
+	std::cout << "Int Fixed constructor call" << std::endl;
 }
 
 Fixed::Fixed(const float n) : value(n * (1 << Fixed::fractionalBits)) 
 {
+	std::cout << "Float Fixed constructor call" << std::endl;
 }
 
 Fixed::~Fixed() 
 {
+	std::cout << "Default Fixed destructor call" << std::endl;
+
 }
 
 Fixed& Fixed::operator=(const Fixed &rhs) 
 {
+	std::cout << "Assignation Fixed call" << std::endl;
 	this->value = rhs.value;
 	return *this;
 }

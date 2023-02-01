@@ -6,15 +6,17 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 15:47:24 by slavoie           #+#    #+#             */
-/*   Updated: 2023/01/23 18:43:25 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/02/01 17:31:35 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string>
-#include <iostream>
 
 #ifndef WEAPON_HPP
 #define WEAPON_HPP
+
+
+#include <string>
+#include <iostream>
 
 class Weapon{
 

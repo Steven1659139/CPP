@@ -6,9 +6,12 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 19:00:17 by slavoie           #+#    #+#             */
-/*   Updated: 2023/01/23 23:29:47 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/02/01 17:23:36 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef ZOMBIE_HPP
+#define ZOMBIE_HPP
 
 #include <string>
 #include <stdlib.h> 
@@ -27,3 +30,5 @@ class Zombie{
 
 Zombie* newZombie(std::string name);
 void randomChump(std::string name);
+
+#endif

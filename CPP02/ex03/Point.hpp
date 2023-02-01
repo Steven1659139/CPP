@@ -6,10 +6,12 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 10:27:19 by slavoie           #+#    #+#             */
-/*   Updated: 2023/01/27 15:32:36 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/02/01 17:47:22 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef POINT_HPP
+#define POINT_HPP
 #include "Fixed.hpp"
 
 class Point
@@ -32,3 +34,4 @@ class Point
 
 bool bsp( Point const a, Point const b, Point const c, Point const point);
 std::ostream &    operator<<(std::ostream & input, Point const & i);
+#endif

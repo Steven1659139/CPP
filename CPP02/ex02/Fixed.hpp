@@ -6,9 +6,12 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 09:01:43 by slavoie           #+#    #+#             */
-/*   Updated: 2023/01/27 10:13:57 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/02/01 17:37:18 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef FIXED_HPP
+#define FIXED_HPP
 
 #include <iostream>
 
@@ -55,3 +58,5 @@ class Fixed {
 };
 
 std::ostream& operator<<(std::ostream& os, const Fixed& Fix);
+
+#endif

@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 17:25:05 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/01 17:40:49 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/02/01 17:41:23 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,12 @@
 
 class ClapTrap
 {
-	private:
+	protected:
 		std::string _name;
 		int life_point;
 		int energy_point;
 		int attack_damage;
+		std::string type;
 
 	public:
 		ClapTrap(std::string name);
