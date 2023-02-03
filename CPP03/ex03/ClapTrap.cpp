@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 17:25:02 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/02 16:41:37 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/02/03 11:25:19 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ ClapTrap::ClapTrap()
 	this->energy_point = 10;
 	this->life_point = 10;
 	this->type = "ClapTrap ";
+	std::cout << "ClapTrap default constructor call" << std::endl;
+
 }
 
 ClapTrap::ClapTrap(std::string name)

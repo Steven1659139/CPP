@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 17:25:07 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/02 16:41:53 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/02/03 12:28:34 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,18 @@
 #include "DiamondTrap.hpp"
 int main()
 {
-	ClapTrap Boris("Boris ");
+	// ClapTrap Boris("Boris ");
 
 	// Boris.getAttack();
 	// Boris.getEnergy();
 	// Boris.getLife();
-	Boris.see_stat();
+	// Boris.see_stat();
 
 	// ClapTrap Barnabé("Barnabé");
 	// FragTrap Hurtubise("Hurtubise");
 	// ScavTrap Herménégilde("Herménégilde");
 	DiamondTrap Diamond("Diamond");
+	Diamond.attack("Boris");
 	Diamond.see_stat();
 
 

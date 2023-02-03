@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 11:57:17 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/02 15:32:51 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/02/03 12:45:23 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,11 @@
 
 class ScavTrap : virtual public ClapTrap
 {
+	protected:
+		const static int HIT_POINTS = 100;
+		const static int ENERGY = 50;
+		const static int DAMAGE = 20;
+		
 	public:
 		ScavTrap();
 		ScavTrap(std::string name);

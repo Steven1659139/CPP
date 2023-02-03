@@ -1,6 +1,6 @@
 NAME = DiamondTrap
 
-CPPFLAGS = -std=c++98 -Wall -Werror -Wextra -Wshadow
+CPPFLAGS = -std=c++98 -Wshadow -Wall -Werror -Wextra 
 CC = c++
 SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
 
