@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 17:25:05 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/01 17:40:49 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/02/06 12:51:42 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,9 @@ class ClapTrap
 		int attack_damage;
 
 	public:
+		ClapTrap();
 		ClapTrap(std::string name);
-		ClapTrap(ClapTrap &obj);
+		ClapTrap(ClapTrap &rhs);
 		~ClapTrap();
 		ClapTrap &operator=(const ClapTrap &rhs);
 		void attack(const std::string& target);

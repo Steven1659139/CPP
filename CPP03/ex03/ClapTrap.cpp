@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 17:25:02 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/03 11:25:19 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/02/07 14:01:55 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ ClapTrap::~ClapTrap()
 {
 	std::cout << this->type << "destructor call for " << this->_name << std::endl;
 }
-
 
 ClapTrap::ClapTrap(ClapTrap &obj)
 {

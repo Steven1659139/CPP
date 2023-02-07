@@ -1,34 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/31 11:57:30 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/07 14:02:24 by slavoie          ###   ########.fr       */
+/*   Created: 2023/02/06 11:00:05 by slavoie           #+#    #+#             */
+/*   Updated: 2023/02/06 12:44:22 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP
-#define FRAGTRAP_HPP
+#include <iostream>
 
-#include "ClapTrap.hpp"
-
-class FragTrap : virtual public ClapTrap
+class Animal
 {
 	protected:
-		const static int HIT_POINT = 100;
-		const static int ENERGY = 100;
-		const static int DAMAGE = 30;
+		std::string type;
 
-	public:
-		FragTrap();
-		FragTrap(std::string name);
-		FragTrap(FragTrap &rhs);
-		~FragTrap();
-		FragTrap &operator=(const FragTrap &rhs);
-
-		void highFivesGuys(void);
+	Animal();
+	~Animal();
+	Animal(const Animal &rhs);
+	Animal &operator=(const Animal &rhs);
 };
-#endif
+
+class Dog : public Animal
+{
+	Dog();
+	~Dog();
+	Dog(const Dog &rhs);
+	Dog &operator=(const Dog &rhs);
+};
+
+class Cat : public Animal
+{
+	Cat();
+	~Cat();
+	Cat(const Cat &rhs);
+	Cat &operator=(const Cat &rhs);
+};

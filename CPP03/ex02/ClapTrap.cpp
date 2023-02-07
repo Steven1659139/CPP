@@ -6,11 +6,16 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 17:25:02 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/01 16:20:25 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/02/06 12:52:32 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
+
+ClapTrap::ClapTrap()
+{
+	std::cout << "ClapTrap default constructor call" << std::endl;
+}
 
 ClapTrap::ClapTrap(std::string name)
 {

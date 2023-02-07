@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 11:57:30 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/01 17:57:15 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/02/07 13:33:00 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 class FragTrap : public ClapTrap
 {
 	public:
+		FragTrap();
+		FragTrap(FragTrap &rhs);
 		FragTrap(std::string name);
 		~FragTrap();
 		void highFivesGuys(void);

@@ -1,34 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/31 11:57:30 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/07 14:02:24 by slavoie          ###   ########.fr       */
+/*   Created: 2023/02/06 12:36:19 by slavoie           #+#    #+#             */
+/*   Updated: 2023/02/06 12:43:15 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP
-#define FRAGTRAP_HPP
+#include "Animal.hpp"
 
-#include "ClapTrap.hpp"
-
-class FragTrap : virtual public ClapTrap
+Cat::Cat()
 {
-	protected:
-		const static int HIT_POINT = 100;
-		const static int ENERGY = 100;
-		const static int DAMAGE = 30;
+	std::cout << "Defautl Cat constructor call" << std::endl;
+}
 
-	public:
-		FragTrap();
-		FragTrap(std::string name);
-		FragTrap(FragTrap &rhs);
-		~FragTrap();
-		FragTrap &operator=(const FragTrap &rhs);
+Cat::~Cat()
+{
+	std::cout << "Defautl Cat destructor call" << std::endl;
+}
 
-		void highFivesGuys(void);
-};
-#endif
+Cat::Cat(const Cat &rhs)
+{
+	*this = rhs;
+	std::cout << "Copy Cat constructor call" << std::endl;
+}
+
+Cat &Cat::operator=(const Cat &rhs)
+{
+	this->type = rhs.type;
+	std::cout <<  "Copy Cat assignment operator call" << std::endl;
+	return(*this);
+}

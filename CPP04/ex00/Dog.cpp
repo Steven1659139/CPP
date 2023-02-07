@@ -1,34 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/31 11:57:30 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/07 14:02:24 by slavoie          ###   ########.fr       */
+/*   Created: 2023/02/06 12:35:41 by slavoie           #+#    #+#             */
+/*   Updated: 2023/02/06 12:43:36 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP
-#define FRAGTRAP_HPP
+#include "Animal.hpp"
 
-#include "ClapTrap.hpp"
-
-class FragTrap : virtual public ClapTrap
+Dog::Dog()
 {
-	protected:
-		const static int HIT_POINT = 100;
-		const static int ENERGY = 100;
-		const static int DAMAGE = 30;
+	std::cout << "Defautl Dog constructor call" << std::endl;
+}
 
-	public:
-		FragTrap();
-		FragTrap(std::string name);
-		FragTrap(FragTrap &rhs);
-		~FragTrap();
-		FragTrap &operator=(const FragTrap &rhs);
+Dog::~Dog()
+{
+	std::cout << "Defautl Dog destructor call" << std::endl;
+}
 
-		void highFivesGuys(void);
-};
-#endif
+Dog::Dog(const Dog &rhs)
+{
+	*this = rhs;
+	std::cout << "Copy Dog constructor call" << std::endl;
+}
+
+Dog &Dog::operator=(const Dog &rhs)
+{
+	this->type = rhs.type;
+	std::cout <<  "Copy Dog assignment operator call" << std::endl;
+	return(*this);
+}

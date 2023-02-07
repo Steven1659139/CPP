@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 11:57:17 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/03 12:45:23 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/02/07 14:04:14 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ class ScavTrap : virtual public ClapTrap
 		ScavTrap();
 		ScavTrap(std::string name);
 		~ScavTrap();
+		ScavTrap(ScavTrap &rhs);
+		ScavTrap &operator=(const ScavTrap &rhs);
 		void guardGate();
 
 };
