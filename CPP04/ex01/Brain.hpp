@@ -1,28 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Form.hpp                                           :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/08 11:46:39 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/08 11:50:13 by slavoie          ###   ########.fr       */
+/*   Created: 2023/02/08 10:47:46 by slavoie           #+#    #+#             */
+/*   Updated: 2023/02/08 10:54:15 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "iostream"
+#include <iostream>
 
-class Form
+class Brain
 {
-	private:
-		const std::string name;
-		bool signature;
-		int grade_signature;
-		int grade_exec;
-
-	public:
-		getName();
-		getSignature();
-		getGradeSign();
-		getGradeExec();
-}
+	std::string ideas[100];
+};

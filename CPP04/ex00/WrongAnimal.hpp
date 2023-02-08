@@ -1,50 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/06 11:00:05 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/08 10:03:21 by slavoie          ###   ########.fr       */
+/*   Created: 2023/02/08 10:10:24 by slavoie           #+#    #+#             */
+/*   Updated: 2023/02/08 10:11:24 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#include "iostream"
 
-class Animal
+class WrongAnimal
 {
 	protected:
 		std::string type;
 		std::string name;
 	public:
-		Animal();
-		~Animal();
-		Animal(const Animal &rhs);
-		Animal &operator=(const Animal &rhs);
+		WrongAnimal();
+		~WrongAnimal();
+		WrongAnimal(const WrongAnimal &rhs);
+		WrongAnimal &operator=(const WrongAnimal &rhs);
 		std::string getType() const;
 		virtual void makeSound() const;
 };
 
-class Dog : public Animal
+class WrongCat : public WrongAnimal
 {
 	public:
-		Dog();
-		Dog(std::string name);
-		~Dog();
-		Dog(const Dog &rhs);
-		Dog &operator=(const Dog &rhs);
+		WrongCat();
+		WrongCat(std::string name);
+		~WrongCat();
+		WrongCat(const WrongCat &rhs);
+		WrongCat &operator=(const WrongCat &rhs);
 		void makeSound() const;
 };
 
-class Cat : public Animal
-{
-	public:
-		Cat();
-		Cat(std::string name);
-		~Cat();
-		Cat(const Cat &rhs);
-		Cat &operator=(const Cat &rhs);
-		void makeSound() const;
-
-};

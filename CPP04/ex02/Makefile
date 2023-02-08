@@ -1,10 +1,10 @@
-NAME = Bureaucrat
+NAME = AAnimal
 
 CPPFLAGS = -std=c++98 -Wall -Werror -Wextra
 CC = c++
-SRCS =  main.cpp Bureaucrat.cpp
+SRCS =  main.cpp AAnimal.cpp Cat.cpp Dog.cpp 
 
-INC = Bureaucrat.hpp
+INC = AAnimal.hpp
 
 OBJS = $(SRCS:.cpp=.o)
 
