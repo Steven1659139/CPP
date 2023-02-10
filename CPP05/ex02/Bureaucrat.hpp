@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 11:32:44 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/09 16:37:38 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/02/10 15:19:15 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ class Bureaucrat
 		std::string getName() const;
 		int getGrade() const;
 		void signForm(Form &form);
+		void executeForm(Form const & form);
 		// void print();
 
 };

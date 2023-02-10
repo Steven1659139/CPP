@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 18:46:15 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/09 19:12:54 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/02/10 15:15:27 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,13 @@
 
 class RobotomyRequestForm : public Form
 {
+	private:
+		std::string  _target;
+
 	public:
 		RobotomyRequestForm();
-		RobotomyRequestForm(const std::string &name, int gradeSign, int gradeExec);
+		RobotomyRequestForm(const std::string &target);
 		RobotomyRequestForm(const RobotomyRequestForm &rhs);
 		~RobotomyRequestForm();
 		RobotomyRequestForm &operator=(const RobotomyRequestForm &rhs);
-
-
-
-
 };

@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 11:46:39 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/09 19:17:20 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/02/10 15:17:30 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ class Form
 		int getGradeSign() const;
 		int getGradeExec() const;
 		void beSigned(Bureaucrat staff);
+		void execute(Bureaucrat const & executor) const;
 
 		class GradeTooHighException : public std::exception
 		{
