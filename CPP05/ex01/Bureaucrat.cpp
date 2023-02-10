@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 11:37:39 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/09 15:27:02 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/02/09 16:37:32 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,4 +85,18 @@ std::ostream &operator<<(std::ostream &input, Bureaucrat const &rhs)
 {
     input << rhs.getName() << ", bureaucrat grade " << rhs.getGrade();
     return input;
+}
+
+void Bureaucrat::signForm(Form &form)
+{
+	if (this->getGrade() < form.getGradeSign())
+	{
+		form.beSigned(*this);
+		std::cout << this->getName() << " signed " << form.getName() << std::endl;
+	}
+	else
+		std::cout << this->getName() << " couldn't sign " << form.getName() << " because grade too low" << std::endl;
+
+
+
 }

@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 15:31:29 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/09 16:38:05 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/02/09 19:17:10 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Form::Form()
 	std::cout << "Form default constructor call" << std::endl;
 }
 
-Form::Form(const std::string &name, int gradeSign, int gradeExec)
+Form::Form(const std::string &name, const int &gradeSign, const int &gradeExec)
 {
 	this->_name = name;
 	this->_grade_signature = gradeSign;

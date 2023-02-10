@@ -6,12 +6,18 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 11:32:44 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/09 15:50:55 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/02/09 16:37:38 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#ifndef BUREAUCRAT_HPP
+#define BUREAUCRAT_HPP
+
+// #include <iostream>
 #include <exception>
+#include "Form.hpp"
+
+class Form;
 
 class Bureaucrat
 {
@@ -40,8 +46,11 @@ class Bureaucrat
 		void decrementGrade();
 		std::string getName() const;
 		int getGrade() const;
+		void signForm(Form &form);
 		// void print();
 
 };
 
 std::ostream &operator<<(std::ostream &input, Bureaucrat const &rhs);
+
+#endif
