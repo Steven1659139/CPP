@@ -6,13 +6,15 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 14:06:13 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/09 19:18:40 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/02/13 14:59:20 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 #include "Form.hpp"
 #include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
 
 int main()
 {
@@ -30,7 +32,7 @@ int main()
 	// 	std::cerr << e.what() << '\n';
 	// }
 	// Bureaucrat Guy("Guy", 1);
-	Bureaucrat Gille("Gille", 38);
+	Bureaucrat Gille("Gille", 1);
 
 	// std::cout << Guy << std::endl;
 
@@ -43,12 +45,26 @@ int main()
 	// Guy.signForm(RT4);
 	// std::cout << RT4 << std::endl;
 
+	std::string str = "garden";
 
-	ShrubberyCreationForm form1;
-	std::cout << form1 << std::endl;
+	ShrubberyCreationForm *form1 = new ShrubberyCreationForm(str);
+	RobotomyRequestForm *Robot = new RobotomyRequestForm("Robot");
+	PresidentialPardonForm *Steve = new PresidentialPardonForm("Steve");
+	std::cout << *form1 << std::endl;
+	std::cout << *Robot << std::endl;
+	std::cout << *Steve << std::endl;
 
-	Gille.signForm(form1);
+	Gille.signForm(*form1);
+	Gille.signForm(*Robot);
+	Gille.signForm(*Steve);
 
+	Gille.executeForm(*form1);
+	Gille.executeForm(*Robot);
+	Gille.executeForm(*Steve);
+
+	// form1->execute(Gille);
+	// Robot->execute(Gille);
+	// Steve->execute(Gille);
 
 
 

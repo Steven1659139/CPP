@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 11:46:39 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/10 15:17:30 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/02/13 14:42:40 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ class Form
 {
 	private:
 		std::string _name;
+		std::string _target;
 		bool _signature;
 		int _grade_signature;
 		int _grade_exec;
@@ -39,7 +40,8 @@ class Form
 		int getGradeSign() const;
 		int getGradeExec() const;
 		void beSigned(Bureaucrat staff);
-		void execute(Bureaucrat const & executor) const;
+		virtual void execute(Bureaucrat const & executor) const = 0;
+		bool check_requirement(Bureaucrat const &staff) const;
 
 		class GradeTooHighException : public std::exception
 		{
@@ -47,6 +49,11 @@ class Form
 				virtual const char* what() const throw();
 		};
 		class GradeTooLowException : public std::exception
+		{
+			public:
+				virtual const char* what() const throw();
+		};
+		class SignatureException : public std::exception
 		{
 			public:
 				virtual const char* what() const throw();

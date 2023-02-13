@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 18:46:15 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/10 15:15:27 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/02/13 13:08:47 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,5 @@ class RobotomyRequestForm : public Form
 		RobotomyRequestForm(const RobotomyRequestForm &rhs);
 		~RobotomyRequestForm();
 		RobotomyRequestForm &operator=(const RobotomyRequestForm &rhs);
+		void execute(Bureaucrat const & executor) const;
 };

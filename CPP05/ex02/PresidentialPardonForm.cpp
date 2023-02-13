@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 15:14:01 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/10 15:15:08 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/02/13 14:43:41 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 PresidentialPardonForm::PresidentialPardonForm()
 {
-	std::cout << "PresidentialPardonForm default constructor call" << std::endl;
+	// std::cout << "PresidentialPardonForm default constructor call" << std::endl;
 }
 
 PresidentialPardonForm::PresidentialPardonForm(const std::string &target) : Form("PresidentialPardonForm", 25, 5), _target(target) {}
@@ -25,17 +25,23 @@ PresidentialPardonForm::PresidentialPardonForm(const std::string &target) : Form
 PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm &rhs)
 {
 	*this = rhs;
-	std::cout << "PresidentialPardonForm copy constructor call" << std::endl;
+	// std::cout << "PresidentialPardonForm copy constructor call" << std::endl;
 }
 
 PresidentialPardonForm::~PresidentialPardonForm()
 {
-	std::cout << "PresidentialPardonForm default destructor call" << std::endl;
+	// std::cout << "PresidentialPardonForm default destructor call" << std::endl;
 }
 
 PresidentialPardonForm &PresidentialPardonForm::operator=(const PresidentialPardonForm &rhs)
 {
 	(void)rhs;
-	std::cout << "PresidentialPardonForm copy assignement call" << std::endl;
+	// std::cout << "PresidentialPardonForm copy assignement call" << std::endl;
 	return(*this);
+}
+
+void PresidentialPardonForm::execute(Bureaucrat const & executor) const
+{	
+	if(this->check_requirement(executor))
+		std::cout << this->_target << " has been forgiven by Zaphod Beeblebrox" << std::endl;
 }

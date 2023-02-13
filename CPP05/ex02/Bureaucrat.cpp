@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 11:37:39 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/09 16:37:32 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/02/13 14:43:22 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 Bureaucrat::Bureaucrat()
 {
-	std::cout << "Bureaucrat default constructor call" << std::endl;
+	// std::cout << "Bureaucrat default constructor call" << std::endl;
 }
 
 Bureaucrat::Bureaucrat(const std::string &name, int grade)
 {
 	this->_name = name;
 	this->_grade = grade;
-	std::cout << "Bureaucrat constructor call" << std::endl;
+	// std::cout << "Bureaucrat constructor call" << std::endl;
 	if (grade < 1)
 		throw Bureaucrat::GradeTooLowException();
 	else if (grade > 150)
@@ -31,19 +31,19 @@ Bureaucrat::Bureaucrat(const std::string &name, int grade)
 Bureaucrat::Bureaucrat(const Bureaucrat &rhs)
 {
 	*this = rhs;
-	std::cout << "Bureaucrat copy constructor call" << std::endl;
+	// std::cout << "Bureaucrat copy constructor call" << std::endl;
 }
 
 Bureaucrat::~Bureaucrat()
 {
-	std::cout << "Bureaucrat default destructor call" << std::endl;
+	// std::cout << "Bureaucrat default destructor call" << std::endl;
 }
 
 Bureaucrat &Bureaucrat::operator=(const Bureaucrat &rhs)
 {
 	this->_grade = rhs._grade;
 	this->_name = rhs._name;
-	std::cout << "Bureaucrat copy assignement call" << std::endl;
+	// std::cout << "Bureaucrat copy assignement call" << std::endl;
 	return(*this);
 }
 std::string Bureaucrat::getName() const
@@ -96,7 +96,13 @@ void Bureaucrat::signForm(Form &form)
 	}
 	else
 		std::cout << this->getName() << " couldn't sign " << form.getName() << " because grade too low" << std::endl;
+}
 
-
-
+void Bureaucrat::executeForm(Form const &form)
+{
+	if (form.check_requirement(*this) == true)
+	{
+		form.execute(*this);
+		std::cout << this->_name << " executed " << form.getName() << std::endl;
+	}
 }

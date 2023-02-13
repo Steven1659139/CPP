@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 18:49:08 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/10 15:15:23 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/02/13 13:08:50 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,9 @@ class PresidentialPardonForm :  public Form
 
 	public:
 		PresidentialPardonForm();
-		PresidentialPardonForm(const std::string &name, int gradeSign, int gradeExec);
+		PresidentialPardonForm(const std::string &name);
 		PresidentialPardonForm(const PresidentialPardonForm &rhs);
 		~PresidentialPardonForm();
 		PresidentialPardonForm &operator=(const PresidentialPardonForm &rhs);
+		void execute(Bureaucrat const & executor) const;
 };
