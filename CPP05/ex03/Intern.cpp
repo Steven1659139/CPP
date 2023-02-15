@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 09:05:03 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/15 15:23:53 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/02/15 16:28:10 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,18 +50,21 @@ Form* Intern::createShrubberyCreationForm(std::string target)
 
 Form* Intern::makeForm(std::string name, std::string target) 
 {
+    Form *(*formCreator[3])(std::string) = {
+        Intern::createRobotomyRequestForm, 
+        Intern::createPresidentialPardonForm, 
+        Intern::createShrubberyCreationForm
+        };
 
-    static std::map<std::string, std::function<Form*(std::string)> >formCreators;
-    formCreators.insert(std::make_pair("robotomy request", Intern::createRobotomyRequestForm));
-    formCreators.insert(std::make_pair("presidential pardon", &Intern::createPresidentialPardonForm));
-    formCreators.insert(std::make_pair("shrubbery creation", &Intern::createShrubberyCreationForm));
-
-    std::map<std::string, std::function<Form*(std::string)> >::iterator iterator = formCreators.find(name);
-    if (iterator != formCreators.end())
+    for(int i = 0; i < 3; i++)
     {
-        std::cout << "Intern creates " << name << std::endl;
-        return iterator->second(target);
+        if (name == this->Type_form[i])
+        {
+            std::cout << "Intern creates " << name << std::endl;
+            return(formCreator[i](target));
+        }
     }
+
     std::cout << "Intern cannot create " << name << " form" << std::endl;
     return nullptr;
 }
