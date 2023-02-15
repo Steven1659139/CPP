@@ -6,15 +6,16 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 14:06:13 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/15 08:35:47 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/02/15 15:25:02 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 #include "Form.hpp"
-#include "ShrubberyCreationForm.hpp"
-#include "RobotomyRequestForm.hpp"
-#include "PresidentialPardonForm.hpp"
+// #include "ShrubberyCreationForm.hpp"
+// #include "RobotomyRequestForm.hpp"
+// #include "PresidentialPardonForm.hpp"
+#include "Intern.hpp"
 
 int main()
 {
@@ -43,31 +44,45 @@ int main()
 	// std::cout << RT4 << std::endl;
 	// Guy.signForm(RT4);
 	// std::cout << RT4 << std::endl;
-	try
+	// try
+	// {
+
+	// 	std::string str = "garden";
+
+	// 	ShrubberyCreationForm *form1 = new ShrubberyCreationForm(str);
+	// 	RobotomyRequestForm *Robot = new RobotomyRequestForm("Robot");
+	// 	PresidentialPardonForm *Steve = new PresidentialPardonForm("Steve");
+	// 	std::cout << *form1 << std::endl;
+	// 	std::cout << *Robot << std::endl;
+	// 	std::cout << *Steve << std::endl;
+
+	// 	Gille.signForm(*form1);
+	// 	Gille.signForm(*Robot);
+	// 	Gille.signForm(*Steve);
+
+	// Gille.executeForm(*form1);
+	// 	Gille.executeForm(*Steve);
+	// 	Gille.executeForm(*Robot);
+	// }
+	// catch(const std::exception& e)
+	// {
+	// 	std::cerr << e.what() << '\n';
+	// }
+
+	Bureaucrat Gille("Gille", 1);
+	Intern Stage;
+
+	Form *Robotomy = Stage.makeForm("presidential pardon", "Robot");
+
+	if (Robotomy)
 	{
-		Bureaucrat Gille("Gille", 150);
-
-		std::string str = "garden";
-
-		ShrubberyCreationForm *form1 = new ShrubberyCreationForm(str);
-		RobotomyRequestForm *Robot = new RobotomyRequestForm("Robot");
-		PresidentialPardonForm *Steve = new PresidentialPardonForm("Steve");
-		std::cout << *form1 << std::endl;
-		std::cout << *Robot << std::endl;
-		std::cout << *Steve << std::endl;
-
-		Gille.signForm(*form1);
-		Gille.signForm(*Robot);
-		Gille.signForm(*Steve);
-
-		Gille.executeForm(*form1);
-		Gille.executeForm(*Steve);
-		Gille.executeForm(*Robot);
+		Gille.signForm(*Robotomy);
+		Gille.executeForm(*Robotomy);
+		delete Robotomy;
 	}
-	catch(const std::exception& e)
-	{
-		std::cerr << e.what() << '\n';
-	}
+
+
+
 	// form1->execute(Gille);
 	// Robot->execute(Gille);
 	// Steve->execute(Gille);

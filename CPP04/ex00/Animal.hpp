@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 11:00:05 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/08 10:03:21 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/02/15 12:41:37 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ class Animal
 		std::string name;
 	public:
 		Animal();
-		~Animal();
+		virtual ~Animal();
 		Animal(const Animal &rhs);
 		Animal &operator=(const Animal &rhs);
 		std::string getType() const;
