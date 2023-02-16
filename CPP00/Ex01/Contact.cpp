@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: stevenlavoie <stevenlavoie@student.42.f    +#+  +:+       +#+        */
+/*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 16:25:25 by stevenlavoi       #+#    #+#             */
-/*   Updated: 2023/01/13 19:26:19 by stevenlavoi      ###   ########.fr       */
+/*   Updated: 2023/02/16 14:23:05 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,11 @@ std::string get_data(const char *prompt)
         std::getline (std::cin, line);
         if (line.length())
             return (line);
-        if (line[0] == '\0')
+        if (!(std::cin.good()))
         {
             exit(1);
         }
-        std::cout << "L'entrée est vide !";
+        std::cout << "L'entrée est vide !\n";
     }
 }
 

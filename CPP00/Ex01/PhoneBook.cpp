@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: stevenlavoie <stevenlavoie@student.42.f    +#+  +:+       +#+        */
+/*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/31 17:20:03 by stevenlavoi       #+#    #+#             */
-/*   Updated: 2023/01/13 19:41:50 by stevenlavoi      ###   ########.fr       */
+/*   Updated: 2023/02/16 14:30:50 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void    PhoneBook::print_data()
             Contact.print_all_contact(this->contacts[index]);
             index++;
         }
-        std::cout << "--------------------------------------------" << std::endl;
+        std::cout << " -------------------------------------------" << std::endl;
 
         index = 0;
         while (1)
@@ -58,6 +58,8 @@ void    PhoneBook::print_data()
                 Contact.print_contact(this->contacts[index]);
                 break; 
             }
+            if (!(std::cin.good()))
+                exit(1);
             std::cout << "l'index n'est pas valide." << std::endl;
         }
     }
