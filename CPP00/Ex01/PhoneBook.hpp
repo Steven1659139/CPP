@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: stevenlavoie <stevenlavoie@student.42.f    +#+  +:+       +#+        */
+/*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/31 17:19:56 by stevenlavoi       #+#    #+#             */
-/*   Updated: 2023/01/13 17:43:40 by stevenlavoi      ###   ########.fr       */
+/*   Updated: 2023/02/21 13:51:15 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,4 @@ class PhoneBook
         int        nb_contact;
         Contact    contacts[8];
 };
-
 #endif

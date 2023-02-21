@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/31 17:20:03 by stevenlavoi       #+#    #+#             */
-/*   Updated: 2023/02/16 14:30:50 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/02/21 13:59:57 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,9 @@ void    PhoneBook::add_data()
 
 void    PhoneBook::print_data()
 {
-    int index;
+    int index = 0;
     Contact Contact;
     std::string line;
-
-    index = 0;
 
     if (this->nb_contact > 0)
     {
@@ -65,13 +63,4 @@ void    PhoneBook::print_data()
     }
     else
         std::cout << "Le répertoire est vide." << std::endl;
-
-
-
-
-
-
-
-
-
 }

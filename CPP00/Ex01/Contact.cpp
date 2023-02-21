@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 16:25:25 by stevenlavoi       #+#    #+#             */
-/*   Updated: 2023/02/16 14:23:05 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/02/21 13:59:05 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,7 @@ std::string get_data(const char *prompt)
         if (line.length())
             return (line);
         if (!(std::cin.good()))
-        {
             exit(1);
-        }
         std::cout << "L'entrée est vide !\n";
     }
 }
@@ -48,13 +46,7 @@ void    Contact::print_all_contact(Contact contact)
         std::cout << "|";
         TRUNC(contact.nickname);
         std::cout << "|";
-        // TRUNC(contact.phone_number);
-        // std::cout << "|";
-        // TRUNC(contact.darkest_secret);
         std::cout << std::endl;
-
-
-
 }
 
 void    Contact::print_contact(Contact contact)
