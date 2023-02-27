@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 21:43:48 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/24 17:05:26 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/02/27 17:22:20 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,13 @@ int main()
 {
     Harl harl;
     harl.complain("debug");
+    std::cout << std::endl;
     harl.complain("info");
+    std::cout << std::endl;
     harl.complain("warning");
+    std::cout << std::endl;
     harl.complain("error");
+    std::cout << std::endl;
     harl.complain("not_valid");
     return 0;
 }

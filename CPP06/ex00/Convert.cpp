@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 11:26:34 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/20 14:57:13 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/02/27 14:47:47 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,6 @@ Converter &Converter::operator=(const Converter &rhs)
 	return (*this);
 
 }
-
-
-
 
 int Converter::is_char(const std::string input)
 {
@@ -102,8 +99,6 @@ void Converter::display_convertion()
 
 }
 
-
-
 int main(int argc, char **argv)
 {
 	Converter Converter;
@@ -117,12 +112,5 @@ int main(int argc, char **argv)
 	}
 	else
 		std::cout << "only 1 argument" << std::endl;
-
-
-
-
-
-
-
 
 }

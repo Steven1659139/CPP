@@ -6,13 +6,13 @@
 #    By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/23 23:32:15 by slavoie           #+#    #+#              #
-#    Updated: 2023/01/23 23:32:17 by slavoie          ###   ########.fr        #
+#    Updated: 2023/02/27 16:55:17 by slavoie          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = Weapon
 
-CPPFLAGS = -std=c++98 -Wall -Werror -Wextra
+CPPFLAGS = -std=c++98 -Wall -Werror -Wextra -g
 CC = c++
 SRCS = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
 

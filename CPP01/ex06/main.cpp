@@ -6,19 +6,31 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 21:43:48 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/24 17:06:34 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/02/27 17:30:48 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
 
-int main()
+int main(int argc, char **argv)
 {
-    Harl harl;
-    harl.complain("debug");
-    harl.complain("info");
-    harl.complain("warning");
-    harl.complain("error");
-    harl.complain("not_valid");
+    if (argc == 2)
+    {
+        Harl harl;
+        
+        harl.complain(argv[1]);
+
+    }
+
+
+    // harl.complain("debug");
+    // std::cout << std::endl;
+    // harl.complain("info");
+    // std::cout << std::endl;
+    // harl.complain("warning");
+    // std::cout << std::endl;
+    // harl.complain("error");
+    // std::cout << std::endl;
+    // harl.complain("not_valid");
     return 0;
 }
