@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 08:13:23 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/24 17:07:44 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/02/27 17:56:29 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #define FIXED_HPP
 
 #include <iostream>
+#include <iomanip>
 
 class Fixed
 {

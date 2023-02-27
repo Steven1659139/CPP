@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 13:31:51 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/24 17:07:03 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/02/27 17:49:15 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ class Fixed {
 		Fixed(const Fixed &other);
 		Fixed &operator=(const Fixed &rhs);
 		~Fixed();
-		int getRawBits() const;
-		void setRawBits(int raw);
+		int getRawBits(void) const;
+		void setRawBits(int const raw);
 	private:
 		int value;
 		static const int fractionalBits = 8;
