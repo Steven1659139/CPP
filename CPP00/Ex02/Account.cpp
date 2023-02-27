@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 14:47:47 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/21 13:49:02 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/02/24 12:10:15 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ Account::Account( int initial_deposit ) : _accountIndex(Account::_nbAccounts), _
 
 Account::~Account( void )
 {
+	_displayTimestamp();
 	std::cout << "index:" << _accountIndex << ";amount:" << _amount << ";closed" << std::endl;
 }
 

@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 08:13:23 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/01 17:37:02 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/02/24 17:07:44 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,8 @@
 
 #include <iostream>
 
-class Fixed {
-	private:
-		int value;
-		static const int fractionalBits = 8;
-
+class Fixed
+{
 	public:
 		Fixed();
 		Fixed(const int n);
@@ -32,7 +29,12 @@ class Fixed {
 
 		float toFloat(void) const;
 		int	toInt(void) const;
+	private:
+		int value;
+		static const int fractionalBits = 8;
+
 };
 
 std::ostream& operator<<(std::ostream& os, const Fixed& Fix);
+
 #endif

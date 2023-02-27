@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 19:00:17 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/01 17:23:36 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/02/24 12:34:31 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 #include <stdlib.h> 
 #include <iostream>
 
-class Zombie{
-
+class Zombie
+{
 	public:
 		Zombie( std::string name);
 		~Zombie(void);

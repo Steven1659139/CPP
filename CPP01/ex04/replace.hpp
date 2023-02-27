@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 19:56:14 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/01 17:31:56 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/02/24 17:04:34 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,4 +18,5 @@
 #include <string>
 
 int	replace(std::string infile, std::string s1, std::string s2);
+
 #endif

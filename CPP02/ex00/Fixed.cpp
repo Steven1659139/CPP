@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 20:40:59 by slavoie           #+#    #+#             */
-/*   Updated: 2023/01/24 22:21:56 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/02/24 17:06:45 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ Fixed::Fixed(const Fixed &rhs)
 	std::cout << "Copy constructor called" << std::endl;
 	*this = rhs;
 }
-
 
 Fixed::~Fixed() 
 {

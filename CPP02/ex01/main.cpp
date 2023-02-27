@@ -6,14 +6,13 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 08:21:10 by slavoie           #+#    #+#             */
-/*   Updated: 2023/01/27 08:41:17 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/02/24 17:08:02 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
-int
-main( void ) 
+int main(void) 
 {
 	Fixed a;
 	Fixed const b( 10 ); 

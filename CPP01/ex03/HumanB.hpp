@@ -6,10 +6,9 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 16:16:32 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/01 17:25:12 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/02/24 17:04:28 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #ifndef HUMANB_HPP
 #define HUMANB_HPP

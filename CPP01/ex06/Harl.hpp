@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 21:40:20 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/01 17:35:42 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/02/24 17:06:28 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,20 +17,18 @@
 #include <iostream>
 #include <string>
 
-class Harl {
+class Harl
+{
+	public:
+		void complain(std::string level);
 	private:
-
 		static void (Harl::*functions[4])(void);
         static std::string levels[4];
-
-		
 		void debug();
 		void info();
 		void warning();
 		void error();
 		void defaultFunction();
-
-public:
-    void complain(std::string level);
 };
+
 #endif

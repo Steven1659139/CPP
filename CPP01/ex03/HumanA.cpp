@@ -6,14 +6,13 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 16:13:07 by slavoie           #+#    #+#             */
-/*   Updated: 2023/01/23 19:07:19 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/02/24 17:03:03 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanA.hpp"
 
-HumanA::HumanA(std::string name, Weapon& weapon) : _name(name), _weapon(weapon) {
-}
+HumanA::HumanA(std::string name, Weapon& weapon) : _name(name), _weapon(weapon) {}
 
 HumanA::~HumanA(void)
 {

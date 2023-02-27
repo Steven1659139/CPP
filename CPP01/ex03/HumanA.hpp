@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 16:16:26 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/01 17:24:50 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/02/24 17:03:11 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 #include "Weapon.hpp"
 
-class HumanA{
-
+class HumanA
+{
 	public:
 		HumanA(std::string name, Weapon& weapon);
 		~HumanA(void);

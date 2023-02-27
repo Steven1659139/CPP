@@ -6,32 +6,24 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 09:01:30 by slavoie           #+#    #+#             */
-/*   Updated: 2023/01/27 10:26:19 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/02/24 17:13:20 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
-Fixed::Fixed() : value(0) 
-{
-}
+Fixed::Fixed() : value(0) {}
 
 Fixed::Fixed(const Fixed &rhs)
 {
 	*this = rhs;
 }
 
-Fixed::Fixed(const int n) : value(n << Fixed::fractionalBits) 
-{
-}
+Fixed::Fixed(const int n) : value(n << Fixed::fractionalBits) {}
 
-Fixed::Fixed(const float n) : value(n * (1 << Fixed::fractionalBits)) 
-{
-}
+Fixed::Fixed(const float n) : value(n * (1 << Fixed::fractionalBits)) {}
 
-Fixed::~Fixed() 
-{
-}
+Fixed::~Fixed() {}
 
 Fixed& Fixed::operator=(const Fixed &rhs) 
 {

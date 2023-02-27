@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 19:00:17 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/01 17:24:06 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/02/24 15:15:57 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,14 @@
 #include <stdlib.h> 
 #include <iostream>
 
-class Zombie{
-
+class Zombie
+{
 	public:
 		Zombie(void);
 		~Zombie(void);
 
 		void set_name(std::string name);
 		void announce(void) const;
-
 	private:
 		std::string name;
 };
