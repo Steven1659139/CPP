@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 11:57:14 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/07 13:35:22 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/02/27 19:01:53 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,4 @@ ScavTrap::~ScavTrap()
 void ScavTrap::guardGate()
 {
 	std::cout << this->type << this->_name << " enter in Gate keeper mode !" << std::endl;
-
-
 }

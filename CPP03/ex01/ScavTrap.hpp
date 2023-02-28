@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 11:57:17 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/06 12:52:20 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/02/27 19:03:12 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,6 @@ class ScavTrap : public ClapTrap
 		ScavTrap &operator=(const ScavTrap &rhs);
 		~ScavTrap();
 		void guardGate();
-
+		void attack(const std::string& target);
 };
 #endif

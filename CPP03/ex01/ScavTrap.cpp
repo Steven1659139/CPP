@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 11:57:14 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/07 13:35:27 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/02/27 19:04:38 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,14 +40,32 @@ ScavTrap::ScavTrap(ScavTrap &rhs)
 
 ScavTrap &ScavTrap::operator=(const ScavTrap &rhs)
 {
-	std::cout << this->type << "copy assignment operator called for " << this->_name  << std::endl;
+	this->_name = rhs._name;
+	this->type = rhs.type;
 	this->attack_damage = rhs.attack_damage;
 	this->energy_point = rhs.energy_point;
 	this->life_point = rhs.life_point;
+	std::cout << this->type << "copy assignment operator called for " << this->_name  << std::endl;
 	return(*this);
 }
 
 void ScavTrap::guardGate()
 {
 	std::cout << "ScavTrap " << this->_name << " enter in Gate keeper mode !" << std::endl;
+}
+
+void ScavTrap::attack(const std::string& target)
+{
+	if (this->getLife() <= 0)
+	{
+		this->_dead();
+		return ;
+	}
+	if (this->energy_point)
+	{
+		this->energy_point--;
+		std::cout << "ScavTrap " << this->_name << " attacks " << target << ", causing "<< this->attack_damage << " points of damage!" << std::endl;
+	}
+	else
+		this->_noEnergy();
 }
