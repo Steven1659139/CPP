@@ -6,13 +6,13 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 21:45:18 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/27 17:37:09 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/03/01 17:50:01 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
 
-std::string Harl::levels[4] = { "debug", "info", "warning", "error"};
+std::string Harl::levels[4] = { "DEBUG", "INFO", "WARNING", "ERROR"};
 
 void Harl::debug()
 {

@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 15:47:24 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/24 17:04:17 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/03/01 17:42:58 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class Weapon
 	public:
 		Weapon(std::string name);
 		~Weapon();
-		std::string& getType();
+		const std::string& getType();
 		void setType(std::string new_value);
 	private:
 		std::string _type;
