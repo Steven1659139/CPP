@@ -1,6 +1,6 @@
 NAME = ClapTrap
 
-CPPFLAGS = -std=c++98 -Wall -Werror -Wextra -g
+CPPFLAGS = -std=c++98 -Wall -Werror -Wextra
 CC = c++
 SRCS = main.cpp ClapTrap.cpp 
 
