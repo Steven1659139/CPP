@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
+/*   By: stevenlavoie <stevenlavoie@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 13:31:51 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/27 17:49:15 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/03/03 08:08:04 by stevenlavoi      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 class Fixed {
 	public:
 		Fixed();
-		Fixed(const Fixed &other);
+		Fixed(const Fixed &rhs);
 		Fixed &operator=(const Fixed &rhs);
 		~Fixed();
 		int getRawBits(void) const;
