@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
+/*   By: stevenlavoie <stevenlavoie@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 10:27:06 by slavoie           #+#    #+#             */
-/*   Updated: 2023/01/27 19:51:54 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/03/03 09:33:25 by stevenlavoi      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,34 +15,34 @@
 
 Fixed::Fixed() : value(0) 
 {
-	std::cout << "Default Fixed constructor call" << std::endl;
+	//  std::cout << "Default Fixed constructor call" << std::endl;
 }
 
 Fixed::Fixed(const Fixed &rhs)
 {
-	std::cout << "Copy Fixed constructor call" << std::endl;
+	// std::cout << "Copy Fixed constructor call" << std::endl;
 	*this = rhs;
 }
 
 Fixed::Fixed(const int n) : value(n << Fixed::fractionalBits) 
 {
-	std::cout << "Int Fixed constructor call" << std::endl;
+	// std::cout << "Int Fixed constructor call" << std::endl;
 }
 
-Fixed::Fixed(const float n) : value(n * (1 << Fixed::fractionalBits)) 
+Fixed::Fixed(const float n) : value(roundf(n * (1 << Fixed::fractionalBits))) 
 {
-	std::cout << "Float Fixed constructor call" << std::endl;
+	// std::cout << "Float Fixed constructor call" << std::endl;
 }
 
 Fixed::~Fixed() 
 {
-	std::cout << "Default Fixed destructor call" << std::endl;
+	// std::cout << "Default Fixed destructor call" << std::endl;
 
 }
 
 Fixed& Fixed::operator=(const Fixed &rhs) 
 {
-	std::cout << "Assignation Fixed call" << std::endl;
+	// std::cout << "Assignation Fixed call" << std::endl;
 	this->value = rhs.value;
 	return *this;
 }

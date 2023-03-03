@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
+/*   By: stevenlavoie <stevenlavoie@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 10:27:14 by slavoie           #+#    #+#             */
-/*   Updated: 2023/01/27 19:59:36 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/03/03 14:25:14 by stevenlavoi      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,25 +39,25 @@ void viewTriangle(Point const &a, Point const &b, Point const &c, Point const &p
 int main()
 {
 
-	// Point a(0.0f, 7.0f);
-    // Point b(10.0f,2.0f);
-    // Point c(10.0f,17.0f);
+	Point a(0.0f, 7.0f);
+    Point b(10.0f,2.0f);
+    Point c(10.0f,17.0f);
 
-    // Point v(6.0f,10.0f);
-    // Point w(6.0f, 14.0f);
-    // Point x(10.0f, 10.0f);
-    // Point y(9.9f, 7.0f);
+    Point v(6.0f,10.0f);
+    Point w(6.0f, 14.0f);
+    Point x(10.0f, 10.0f);
+    Point y(9.9f, 7.0f);
 
-    // std::cout << "Test 1,"<< v << " Dans le triangle:     True    " << bsp(a, b, c, v) << std::endl;
-    //     viewTriangle(a,b,c,v);
-    // std::cout << "Test 2,"<< w << " Dehors triangle:    False    " << bsp(a, b, c, w) << std::endl;
-    //     viewTriangle(a,b,c,w);
-    // std::cout << "Test 3,"<< x << " sur un arrete:        False    " << bsp(a, b, c, x) << std::endl;
-    //     viewTriangle(a,b,c,x);
-    // std::cout << "Test 4,"<< b << " sur un point:        False    " << bsp(a, b, c, b) << std::endl;
-    //     viewTriangle(a,b,c,b);
-    // std::cout << "Test 5,"<< y << " proche arrete:        True    " << bsp(a, b, c, y) << std::endl;
-    //     viewTriangle(a,b,c,y);
+    std::cout << "Test 1,"<< v << " Dans le triangle:     True    " << bsp(a, b, c, v) << std::endl;
+        viewTriangle(a,b,c,v);
+    std::cout << "Test 2,"<< w << " Dehors triangle:    False    " << bsp(a, b, c, w) << std::endl;
+        viewTriangle(a,b,c,w);
+    std::cout << "Test 3,"<< x << " sur un arrete:        False    " << bsp(a, b, c, x) << std::endl;
+        viewTriangle(a,b,c,x);
+    std::cout << "Test 4,"<< b << " sur un point:        False    " << bsp(a, b, c, b) << std::endl;
+        viewTriangle(a,b,c,b);
+    std::cout << "Test 5,"<< y << " proche arrete:        True    " << bsp(a, b, c, y) << std::endl;
+        viewTriangle(a,b,c,y);
 
 
 
@@ -66,10 +66,10 @@ int main()
 	Point C(10.0f, 10.0f);
 	Point P(9.9f, 7.0f);
 
-    std::cout << A << std::endl;
-    std::cout << B << std::endl;
-    std::cout << C << std::endl;
-    std::cout << P << std::endl;
+    // std::cout << A << std::endl;
+    // std::cout << B << std::endl;
+    // std::cout << C << std::endl;
+    // std::cout << P << std::endl;
 
     // Point &a = A;
     // Point &b = B;

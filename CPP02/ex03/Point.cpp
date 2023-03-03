@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Point.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
+/*   By: stevenlavoie <stevenlavoie@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 10:27:17 by slavoie           #+#    #+#             */
-/*   Updated: 2023/01/27 19:53:05 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/03/03 09:38:31 by stevenlavoi      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,24 @@
 
 Point::Point() : _x(0), _y(0) 
 {
-	std::cout << "Default Point constructor call" << std::endl;
+	// std::cout << "Default Point constructor call" << std::endl;
 
 }
 
 Point::Point(const float x, const float y) : _x(x), _y(y)
 {
-	std::cout << "Set Point constructor call" << std::endl;
+	// std::cout << "Set Point constructor call" << std::endl;
 
 }
 
-Point::Point(Point &src)
+Point::Point(const Point &src) : _x(src._x), _y(src._y)
 {
-	std::cout << "Copy Point constructor call" << std::endl;
-
-	*this = src;
+	// std::cout << "Copy Point constructor call" << std::endl;
 }
 
 Point& Point::operator=(const Point &rhs) 
 {
-	std::cout << "Assignation Point call" << std::endl;
+	// std::cout << "Assignation Point call" << std::endl;
 
 	(Fixed)this->_x = rhs._x;
 	(Fixed)this->_y = rhs._y;
@@ -42,7 +40,7 @@ Point& Point::operator=(const Point &rhs)
 
 Point::~Point() 
 {
-	std::cout << "Default Point destructor call" << std::endl;
+	// std::cout << "Default Point destructor call" << std::endl;
 	
 }
 

@@ -3,16 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
+/*   By: stevenlavoie <stevenlavoie@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 10:27:11 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/01 17:37:32 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/03/03 09:34:07 by stevenlavoi      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FIXED_HPP
 #define FIXED_HPP
+
 #include <iostream>
+#include <cmath>
 
 class Fixed {
 	private:

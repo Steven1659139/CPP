@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Point.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
+/*   By: stevenlavoie <stevenlavoie@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 10:27:19 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/01 17:47:22 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/03/03 09:34:32 by stevenlavoi      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class Point
 	public:
 		Point();
 		~Point();
-		Point(Point &src);
+		Point(const Point &src);
 		Point(const float x, const float y);
 		float getX() const;
 		float getY() const;
