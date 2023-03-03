@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
+/*   By: stevenlavoie <stevenlavoie@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 17:25:07 by slavoie           #+#    #+#             */
-/*   Updated: 2023/03/01 15:21:04 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/03/03 15:10:50 by stevenlavoi      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,6 @@ int main()
 	Herménégilde.takeDamage(1);
 	Herménégilde.attack("Barnabé");
 	Herménégilde.beRepaired(4);
-	Herménégilde2.beRepaired(2);
 	std::cout << "\n";
 
 

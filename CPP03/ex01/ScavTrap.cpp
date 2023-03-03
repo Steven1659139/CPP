@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
+/*   By: stevenlavoie <stevenlavoie@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 11:57:14 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/27 19:04:38 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/03/03 14:56:55 by stevenlavoi      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ ScavTrap::~ScavTrap()
 ScavTrap::ScavTrap(ScavTrap &rhs)
 {
 	*this = rhs;
-	std::cout << this->type << "copy constructor call for"  << this->_name << std::endl;
+	std::cout << this->type << "copy constructor call for "  << this->_name << std::endl;
 }
 
 ScavTrap &ScavTrap::operator=(const ScavTrap &rhs)
