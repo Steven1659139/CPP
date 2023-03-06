@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: stevenlavoie <stevenlavoie@student.42.f    +#+  +:+       +#+        */
+/*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 09:01:30 by slavoie           #+#    #+#             */
-/*   Updated: 2023/03/03 08:20:45 by stevenlavoi      ###   ########.fr       */
+/*   Updated: 2023/03/06 15:07:03 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Fixed::Fixed(const Fixed &rhs)
 	*this = rhs;
 }
 
-Fixed::Fixed(const int n) : value(roundf(n << Fixed::fractionalBits)) {}
+Fixed::Fixed(const int n) : value((n << Fixed::fractionalBits)) {}
 
 Fixed::Fixed(const float n) : value(roundf(n * (1 << Fixed::fractionalBits))) {}
 

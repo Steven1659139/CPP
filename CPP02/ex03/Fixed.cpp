@@ -3,46 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: stevenlavoie <stevenlavoie@student.42.f    +#+  +:+       +#+        */
+/*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 10:27:06 by slavoie           #+#    #+#             */
-/*   Updated: 2023/03/03 09:33:25 by stevenlavoi      ###   ########.fr       */
+/*   Updated: 2023/03/06 15:10:58 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "Fixed.hpp"
 
-Fixed::Fixed() : value(0) 
-{
-	//  std::cout << "Default Fixed constructor call" << std::endl;
-}
+Fixed::Fixed() : value(0) {}
 
 Fixed::Fixed(const Fixed &rhs)
 {
-	// std::cout << "Copy Fixed constructor call" << std::endl;
 	*this = rhs;
 }
 
-Fixed::Fixed(const int n) : value(n << Fixed::fractionalBits) 
-{
-	// std::cout << "Int Fixed constructor call" << std::endl;
-}
+Fixed::Fixed(const int n) : value(n << Fixed::fractionalBits) {}
 
-Fixed::Fixed(const float n) : value(roundf(n * (1 << Fixed::fractionalBits))) 
-{
-	// std::cout << "Float Fixed constructor call" << std::endl;
-}
+Fixed::Fixed(const float n) : value(roundf(n * (1 << Fixed::fractionalBits))) {}
 
-Fixed::~Fixed() 
-{
-	// std::cout << "Default Fixed destructor call" << std::endl;
-
-}
+Fixed::~Fixed() {}
 
 Fixed& Fixed::operator=(const Fixed &rhs) 
 {
-	// std::cout << "Assignation Fixed call" << std::endl;
 	this->value = rhs.value;
 	return *this;
 }
@@ -111,8 +96,8 @@ Fixed Fixed::operator+(const Fixed& rhs) const
 Fixed Fixed::operator-(const Fixed& rhs) const
 {
 	return(this->toFloat() - rhs.toFloat());
-
 }
+
 Fixed Fixed::operator*(const Fixed& rhs) const
 {
 	return(this->toFloat() * rhs.toFloat());
@@ -128,6 +113,7 @@ Fixed& Fixed::operator++()
 	++this->value;
 	return(*this);
 }
+
 Fixed Fixed::operator++(int)
 {
 	Fixed temp(*this);
