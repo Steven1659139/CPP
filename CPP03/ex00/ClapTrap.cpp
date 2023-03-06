@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 17:25:02 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/27 18:59:06 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/03/06 15:51:35 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,18 @@
 ClapTrap::ClapTrap()
 {
 	std::cout << "ClapTrap default constructor call" << std::endl;
+	this->_name = "Default";
+	this->_type = "ClapTrap ";
+	this->attack_damage = 0;
+	this->energy_point = 10;
+	this->life_point = 10;
 }
 
 ClapTrap::ClapTrap(std::string name)
 {
 	std::cout << "ClapTrap constructor call" << std::endl;
 	this->_name = name;
+	this->_type = "ClapTrap ";
 	this->attack_damage = 0;
 	this->energy_point = 10;
 	this->life_point = 10;
@@ -49,7 +55,10 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &rhs)
 
 void ClapTrap::stat()
 {
-	std::cout << "Name: " << this->_name << " Attack: " << this->getAttack() << " Energy: " << this->getEnergy() << " Life: " << this->getLife() << std::endl;
+	std::cout << "___________________________________\n";
+	std::cout << "Type\tName\tLife\tEnergy\tDamage\n"; 
+	std::cout << this->_type << this->_name << " " << this->life_point << "\t" << this->energy_point << "\t" << this->getAttack() << std::endl;
+	std::cout << "___________________________________\n";
 }
 
 void ClapTrap::_dead()

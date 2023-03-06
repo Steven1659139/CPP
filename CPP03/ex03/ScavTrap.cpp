@@ -6,34 +6,31 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 11:57:14 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/07 14:03:33 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/03/06 17:01:19 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap()// : ClapTrap("Default")
+ScavTrap::ScavTrap()
 {
 	this->_name = "Default ";
-	// this->life_point = 100;
-	// this->energy_point = 50;
-	// this->attack_damage = 20;
+	this->life_point = 100;
+	this->energy_point = 50;
+	this->attack_damage = 20;
 	std::cout << "ScavTrap default constructor call" << std::endl;
 
 }
 
 
-ScavTrap::ScavTrap(std::string name)// : ClapTrap(name)
+ScavTrap::ScavTrap(std::string name)
 {
-	// this->life_point = 100;
-	// this->energy_point = 50;
-	// this->attack_damage = 20;
+	this->life_point = 100;
+	this->energy_point = 50;
+	this->attack_damage = 20;
 	this->type = "ScavTrap ";
 
 	std::cout << this->type << name << " has construct" << std::endl;
-
-
-
 }
 
 ScavTrap::ScavTrap(ScavTrap &rhs)
@@ -51,17 +48,17 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &rhs)
 	return(*this);
 }
 
-// void ScavTrap::attack(std::string &target)
-// {
-// 	if (this->energy_point)
-// 	{
-// 		this->energy_point--;
-// 		std::cout << << this->_name << " attacks " << target << ", causing "<< this->attack_damage << " points of damage!" << std::endl;
-// 	}
-// 	else
-// 		std::cout << "not enough energy" <<  std::endl;
+void ScavTrap::attack(const std::string &target)
+{
+	if (this->energy_point)
+	{
+		this->energy_point--;
+		std::cout << this->type << this->_name << " attacks " << target << ", causing "<< this->attack_damage << " points of damage!" << std::endl;
+	}
+	else
+		ScavTrap::_noEnergy();
 
-// }
+}
 
 ScavTrap::~ScavTrap()
 {

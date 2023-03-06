@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: stevenlavoie <stevenlavoie@student.42.f    +#+  +:+       +#+        */
+/*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 17:25:02 by slavoie           #+#    #+#             */
-/*   Updated: 2023/03/03 15:03:40 by stevenlavoi      ###   ########.fr       */
+/*   Updated: 2023/03/06 15:48:10 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,10 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &rhs)
 
 void ClapTrap::stat()
 {
-	std::cout << "Name: " << this->_name << " Attack: " << this->getAttack() << " Energy: " << this->getEnergy() << " Life: " << this->getLife() << std::endl;
+	std::cout << "___________________________________\n";
+	std::cout << "Type\tName\tLife\tEnergy\tDamage\n"; 
+	std::cout << this->type  << this->_name << " " << this->life_point << "\t" << this->energy_point << "\t" << this->getAttack() << std::endl;
+	std::cout << "___________________________________\n";
 }
 
 void ClapTrap::_dead()

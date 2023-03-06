@@ -15,8 +15,9 @@
 DiamondTrap::DiamondTrap() : ClapTrap("Default_clap_name")
 {
 	this->_name = "Default_clap_name ";
-	this->life_point = FragTrap::life_point;
-	
+	this->energy_point = ScavTrap::ENERGY;
+	this->life_point = FragTrap::HIT_POINT;
+	this->attack_damage = FragTrap::DAMAGE;
 }
 
 DiamondTrap::DiamondTrap(DiamondTrap &rhs)
@@ -25,16 +26,9 @@ DiamondTrap::DiamondTrap(DiamondTrap &rhs)
 	std::cout << "Copy constructor call" << std::endl;
 }
 
-DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"), _name(name)
+DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"), _name(name + "_clap_name")
 {	
-	// ScavTrap Scav(name);
-	// FragTrap Frag(name);
-
-	// this->energy_point = Scav.getEnergy();
-	// this->life_point = Frag.getLife();
-	// this->attack_damage = Frag.getAttack();
 	this->_type = "DiamondTrap ";
-	// this->_name = name + "_clap_name";
 	this->energy_point = ScavTrap::ENERGY;
 	this->life_point = FragTrap::HIT_POINT;
 	this->attack_damage = FragTrap::DAMAGE;
@@ -44,32 +38,6 @@ DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"), _nam
 DiamondTrap::~DiamondTrap()
 {
 	std::cout << this->_type << this->_name << " has destruct" << std::endl;
-}
-
-// void DiamondTrap::attack(std::string &target)
-// {
-// 	ScavTrap::attack(target);
-// }
-
-void DiamondTrap::set_life()
-{
-	this->life_point = FragTrap::life_point;
-}
-void DiamondTrap::set_energy()
-{
-	// this->energy_point = ScavTrap::energy_point;
-}
-void DiamondTrap::set_type()
-{
-	this->type = "DiamondTrap";
-}
-void DiamondTrap::set_attack()
-{
-	// this->attack_damage = FragTrap::attack_damage;
-}
-void DiamondTrap::set_name(std::string name)
-{
-	this->_name = name;
 }
 
 void DiamondTrap::whoAmI()

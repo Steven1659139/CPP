@@ -6,42 +6,72 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 17:25:07 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/03 12:28:34 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/03/06 16:55:16 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
 #include "DiamondTrap.hpp"
+
 int main()
 {
-	// ClapTrap Boris("Boris ");
+	std::cout << "[CONSTRUCTOR]\n";
 
-	// Boris.getAttack();
-	// Boris.getEnergy();
-	// Boris.getLife();
-	// Boris.see_stat();
+	ClapTrap Boris("Boris");
+	ClapTrap Barnabé("Barnabé");
+	DiamondTrap Herménégilde("Herménégilde");
+	DiamondTrap Herménégilde2(Herménégilde);
+	std::cout << std::endl;
 
-	// ClapTrap Barnabé("Barnabé");
-	// FragTrap Hurtubise("Hurtubise");
-	// ScavTrap Herménégilde("Herménégilde");
-	DiamondTrap Diamond("Diamond");
-	Diamond.attack("Boris");
-	Diamond.see_stat();
+	std::cout << "[STAT]\n";
 
 
+	Boris.stat();
+	Barnabé.stat();
+	Herménégilde.stat();
+	Herménégilde2.stat();
+	std::cout << std::endl;
+
+	std::cout << "[ACTION]\n";
+	Herménégilde.guardGate();
+	Herménégilde.attack("Boris");
+	Boris.takeDamage(Herménégilde.getAttack());
+	std::cout << std::endl;
+
+	Boris.attack("Barnabé");
+	Barnabé.takeDamage(Boris.getAttack());
+	Boris.takeDamage(5);
+	Boris.beRepaired(3);
+	std::cout << std::endl;
+	
+	while(Herménégilde.getEnergy() > 0)
+	{
+		Herménégilde.attack("Barnabé");
+		Barnabé.takeDamage(Herménégilde.getAttack());
+	}
+	Herménégilde.attack("Barnabé");
+	Herménégilde.beRepaired(3);
+	std::cout << "\n";
+
+	while(Herménégilde.getLife() > 0)
+	{
+		Herménégilde.takeDamage(1);
+	}
+	Herménégilde.takeDamage(1);
+	Herménégilde.attack("Barnabé");
+	Herménégilde.beRepaired(4);
+	std::cout << "\n";
 
 
-	// Hurtubise.highFivesGuys();
-	// Hurtubise.attack("Herménégilde");
-	// Herménégilde.takeDamage(Hurtubise.getAttack());
-	// Herménégilde.guardGate();
-	// Herménégilde.attack("Boris");
-	// Boris.takeDamage(Herménégilde.getAttack());
+	std::cout << "[STAT]\n";
 
-	// Boris.attack("Barnabé");
-	// Barnabé.takeDamage(Boris.getAttack());
-	// Boris.takeDamage(5);
-	// Boris.beRepaired(3);
 
+	Boris.stat();
+	Barnabé.stat();
+	Herménégilde.stat();
+	Herménégilde2.stat();
+	std::cout << std::endl;
+
+	std::cout << "[DESTRUCTOR]\n";
 }

@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 11:57:30 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/07 14:02:24 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/03/06 16:50:05 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,5 @@ class FragTrap : virtual public ClapTrap
 
 		void highFivesGuys(void);
 };
+
 #endif
