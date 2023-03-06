@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
+/*   By: stevenlavoie <stevenlavoie@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 11:57:26 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/07 13:34:14 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/03/05 18:25:35 by stevenlavoi      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,19 @@ FragTrap::FragTrap(FragTrap &rhs)
 	std::cout << this->type << "copy constructor call for"  << this->_name << std::endl;
 }
 
+FragTrap &FragTrap::operator=(const FragTrap &rhs)
+{
+	this->_name = rhs._name;
+	this->type = rhs.type;
+	this->attack_damage = rhs.attack_damage;
+	this->energy_point = rhs.energy_point;
+	this->life_point = rhs.life_point;
+	std::cout << this->type << "copy assignment operator called for " << this->_name  << std::endl;
+	return(*this);
+
+}
 
 void FragTrap::highFivesGuys()
 {
 	std::cout << this->type << this->_name << " want a high fives !" << std::endl;
-
-
 }
