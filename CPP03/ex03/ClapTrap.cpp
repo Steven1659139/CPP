@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 17:25:02 by slavoie           #+#    #+#             */
-/*   Updated: 2023/03/07 13:40:22 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/03/08 12:16:44 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ ClapTrap::ClapTrap()
 	this->attack_damage = 0;
 	this->energy_point = 10;
 	this->life_point = 10;
-	this->_type = "ClapTrap ";
+	this->_type = "[ClapTrap] ";
 	std::cout << "ClapTrap default constructor call" << std::endl;
 }
 
@@ -28,7 +28,7 @@ ClapTrap::ClapTrap(std::string name)
 	this->attack_damage = 0;
 	this->energy_point = 10;
 	this->life_point = 10;
-	this->_type = "ClapTrap ";
+	this->_type = "[ClapTrap] ";
 	std::cout << this->_type << "has constructor call for " << name << std::endl;
 }
 

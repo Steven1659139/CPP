@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 11:57:30 by slavoie           #+#    #+#             */
-/*   Updated: 2023/03/06 16:50:05 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/03/08 12:20:50 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class FragTrap : virtual public ClapTrap
 		const static int HIT_POINT = 100;
 		const static int ENERGY = 100;
 		const static int DAMAGE = 30;
+		std::string _type;
 
 	public:
 		FragTrap();
@@ -28,7 +29,6 @@ class FragTrap : virtual public ClapTrap
 		FragTrap(FragTrap &rhs);
 		~FragTrap();
 		FragTrap &operator=(const FragTrap &rhs);
-
 		void highFivesGuys(void);
 };
 

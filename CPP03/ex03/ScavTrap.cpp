@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 11:57:14 by slavoie           #+#    #+#             */
-/*   Updated: 2023/03/07 13:40:52 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/03/08 12:16:04 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ ScavTrap::ScavTrap()
 	this->life_point = 100;
 	this->energy_point = 50;
 	this->attack_damage = 20;
+	this->_type = "[ScavTrap] ";
 	std::cout << "ScavTrap default constructor call" << std::endl;
 
 }
@@ -28,7 +29,7 @@ ScavTrap::ScavTrap(std::string name)
 	this->life_point = 100;
 	this->energy_point = 50;
 	this->attack_damage = 20;
-	this->_type = "ScavTrap ";
+	this->_type = "[ScavTrap] ";
 
 	std::cout << this->_type << name << " has construct" << std::endl;
 }
@@ -68,6 +69,4 @@ ScavTrap::~ScavTrap()
 void ScavTrap::guardGate()
 {
 	std::cout << this->_type << this->_name << " enter in Gate keeper mode !" << std::endl;
-
-
 }

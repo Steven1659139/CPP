@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 11:57:17 by slavoie           #+#    #+#             */
-/*   Updated: 2023/03/06 16:54:20 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/03/08 12:20:47 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class ScavTrap : virtual public ClapTrap
 		const static int HIT_POINTS = 100;
 		const static int ENERGY = 50;
 		const static int DAMAGE = 20;
+		std::string _type;
 		
 	public:
 		ScavTrap();
@@ -30,6 +31,5 @@ class ScavTrap : virtual public ClapTrap
 		ScavTrap &operator=(const ScavTrap &rhs);
 		void attack(const std::string &target);
 		void guardGate();
-
 };
 #endif

@@ -26,8 +26,10 @@ DiamondTrap::DiamondTrap(DiamondTrap &rhs)
 	std::cout << "Copy constructor call" << std::endl;
 }
 
-DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"), _name(name)
+DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name")
 {	
+	this->_name = name;
+	ClapTrap::_name = name + "_clap_name";
 	this->_type = "DiamondTrap ";
 	this->energy_point = ScavTrap::ENERGY;
 	this->life_point = FragTrap::HIT_POINT;
@@ -42,7 +44,7 @@ DiamondTrap::~DiamondTrap()
 
 void DiamondTrap::whoAmI()
 {
-	
+	std::cout << "I am a DiamondTrap and my name is " << this->_name << ". My ClapTrap name is " << ClapTrap::_name << std::endl;
 }
 
 DiamondTrap &DiamondTrap::operator=(const DiamondTrap &rhs)

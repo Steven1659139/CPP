@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 11:57:26 by slavoie           #+#    #+#             */
-/*   Updated: 2023/03/07 13:43:14 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/03/08 12:16:21 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ FragTrap::FragTrap()
 	this->life_point = 100;
 	this->energy_point = 100;
 	this->attack_damage = 30;
+	this->_type = "[FragTrap] ";
+
 	std::cout << "FragTrap default constructor call" << std::endl;
 
 }
@@ -27,7 +29,7 @@ FragTrap::FragTrap(std::string name)
 	this->life_point = 100;
 	this->energy_point = 100;
 	this->attack_damage = 30;
-	this->_type = "FragTrap ";
+	this->_type = "[FragTrap] ";
 	std::cout << this->_type << name << " has construct" << std::endl;
 }
 
@@ -54,6 +56,4 @@ FragTrap::~FragTrap()
 void FragTrap::highFivesGuys()
 {
 	std::cout << this->_type << this->_name << " want a high fives !" << std::endl;
-
-
 }

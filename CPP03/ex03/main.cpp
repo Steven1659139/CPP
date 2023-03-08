@@ -6,12 +6,10 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 17:25:07 by slavoie           #+#    #+#             */
-/*   Updated: 2023/03/07 13:17:35 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/03/08 11:06:55 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
-#include "FragTrap.hpp"
 #include "DiamondTrap.hpp"
 
 int main()
@@ -25,6 +23,8 @@ int main()
 	std::cout << std::endl;
 
 	std::cout << "[STAT]\n";
+
+	Herménégilde.whoAmI();
 
 
 	Boris.stat();
@@ -63,9 +63,7 @@ int main()
 	Herménégilde.beRepaired(4);
 	std::cout << "\n";
 
-
 	std::cout << "[STAT]\n";
-
 
 	Boris.stat();
 	Barnabé.stat();
