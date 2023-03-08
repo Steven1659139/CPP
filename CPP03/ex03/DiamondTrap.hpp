@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 09:05:09 by slavoie           #+#    #+#             */
-/*   Updated: 2023/03/06 16:46:54 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/03/07 13:44:13 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ class DiamondTrap : virtual public ScavTrap, virtual public FragTrap
 		DiamondTrap(std::string name);
 		DiamondTrap &operator=(const DiamondTrap &rhs);
 		~DiamondTrap();
+		void stat();
 		void whoAmI();
 
 };

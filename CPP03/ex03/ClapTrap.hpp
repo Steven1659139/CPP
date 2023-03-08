@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 17:25:05 by slavoie           #+#    #+#             */
-/*   Updated: 2023/03/06 16:45:12 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/03/07 13:39:58 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class ClapTrap
 		int life_point;
 		int energy_point;
 		int attack_damage;
-		std::string type;
+		std::string _type;
 		void _dead();
 		void _noEnergy();
 
