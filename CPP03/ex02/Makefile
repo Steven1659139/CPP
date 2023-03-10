@@ -12,7 +12,7 @@ OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJS) $(INC)
+$(NAME): $(INC) $(OBJS) 
 		$(CC) $(CPPFLAGS) $(OBJS) -o $(NAME)
 
 clean:

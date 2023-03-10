@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 17:25:07 by slavoie           #+#    #+#             */
-/*   Updated: 2023/03/08 11:06:55 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/03/10 14:06:49 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ int main()
 	std::cout << "[STAT]\n";
 
 	Herménégilde.whoAmI();
+	Herménégilde.guardGate();
+	Herménégilde.highFivesGuys();
 
 
 	Boris.stat();
@@ -34,7 +36,6 @@ int main()
 	std::cout << std::endl;
 
 	std::cout << "[ACTION]\n";
-	Herménégilde.guardGate();
 	Herménégilde.attack("Boris");
 	Boris.takeDamage(Herménégilde.getAttack());
 	std::cout << std::endl;
