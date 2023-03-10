@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 10:59:52 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/08 10:04:52 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/03/10 15:02:30 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 Animal::Animal()
 {
+	this->type = "Undefine animal";
 	std::cout << "Default Animal constructor call" << std::endl;
 }
 

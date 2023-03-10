@@ -2,6 +2,7 @@
 
 WrongAnimal::WrongAnimal()
 {
+	this->type = "Undefine wrong animal";
 	std::cout << "Default WrongAnimal constructor call" << std::endl;
 }
 
@@ -25,7 +26,7 @@ WrongAnimal &WrongAnimal::operator=(const WrongAnimal &rhs)
 
 void WrongAnimal::makeSound() const
 {
-	std::cout << "* medley of Wronganimals sounds *" << std::endl;
+	std::cout << "* medley of Wrong animals sounds *" << std::endl;
 }
 
 std::string WrongAnimal::getType() const

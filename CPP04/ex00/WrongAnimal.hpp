@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 10:10:24 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/08 10:11:24 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/03/10 14:21:04 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ class WrongAnimal
 		std::string name;
 	public:
 		WrongAnimal();
-		~WrongAnimal();
+		virtual ~WrongAnimal();
 		WrongAnimal(const WrongAnimal &rhs);
 		WrongAnimal &operator=(const WrongAnimal &rhs);
 		std::string getType() const;
@@ -36,4 +36,3 @@ class WrongCat : public WrongAnimal
 		WrongCat &operator=(const WrongCat &rhs);
 		void makeSound() const;
 };
-
