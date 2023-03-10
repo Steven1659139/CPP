@@ -8,7 +8,7 @@
 			"type": "lldb",
 			"request": "launch",
 			"name": "Debug",
-			"program": "${workspaceFolder}/CPP03/ex03/DiamondTrap",
+			"program": "${workspaceFolder}/CPP04/ex01/./Animal",
 			"args": [],
 			"cwd": "${workspaceFolder}"
 		}

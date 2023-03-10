@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 12:36:19 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/08 10:53:56 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/03/10 16:13:27 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,6 @@ Cat::Cat()
 	this->type = "Cat";
 	this->brain = new Brain;
 	std::cout << "Default Cat constructor call" << std::endl;
-}
-
-Cat::Cat(std::string name)
-{
-	this->brain = new Brain;
-
-	this->type = "Cat";
-	this->name = name;
-
 }
 
 Cat::~Cat()
@@ -52,4 +43,9 @@ Cat &Cat::operator=(const Cat &rhs)
 void Cat::makeSound() const
 {
 	std::cout << "BROU BROU" << std::endl;
+}
+
+Brain *Cat::getBrain() const
+{
+	return(this->brain);
 }

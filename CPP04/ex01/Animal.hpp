@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 11:00:05 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/08 10:59:59 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/03/10 16:14:06 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ class Animal
 {
 	protected:
 		std::string type;
-		std::string name;
 	public:
 		Animal();
 		virtual ~Animal();
@@ -31,11 +30,12 @@ class Dog : public Animal
 {
 	public:
 		Dog();
-		Dog(std::string name);
 		~Dog();
 		Dog(const Dog &rhs);
 		Dog &operator=(const Dog &rhs);
 		void makeSound() const;
+		Brain *getBrain() const;
+
 	private:
 		Brain *brain;
 };
@@ -44,12 +44,13 @@ class Cat : public Animal
 {
 	public:
 		Cat();
-		Cat(std::string name);
 		~Cat();
 		Cat(const Cat &rhs);
 		Cat &operator=(const Cat &rhs);
 		void makeSound() const;
-		private:
-			Brain *brain;
+		Brain *getBrain() const;
+
+	private:
+		Brain *brain;
 
 };
