@@ -1,6 +1,6 @@
 NAME = Animal
 
-CPPFLAGS = -std=c++98 -Wall -Werror -Wextra -g
+CPPFLAGS = -std=c++98 -Wall -Werror -Wextra
 CC = c++
 SRCS =  main.cpp Animal.cpp Cat.cpp Dog.cpp Brain.cpp
 
