@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 10:47:46 by slavoie           #+#    #+#             */
-/*   Updated: 2023/03/12 13:45:33 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/03/12 19:47:43 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ class Brain
 	public:
 		Brain();
 		~Brain();
-		Brain(const Brain &rhs);
-		Brain &operator=(const Brain &rhs);
+		Brain(const Brain &src);
+		Brain &operator=(const Brain &src);
 		void fill_brain();
 		void print_brain();
 

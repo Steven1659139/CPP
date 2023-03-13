@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 11:26:34 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/27 14:47:47 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/03/12 19:47:43 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,20 @@
 
 Converter::Converter() {}
 
-Converter::Converter(const Converter &rhs) 
+Converter::Converter(const Converter &src) 
 {
-	*this = rhs;
+	*this = src;
 }
 
 Converter::~Converter() {}
 
-Converter &Converter::operator=(const Converter &rhs)
+Converter &Converter::operator=(const Converter &src)
 {
-	this->c = rhs.c;
-	this->i = rhs.i;
-	this->f = rhs.f;
-	this->d = rhs.d;
-	this->initial_type = rhs.initial_type;
+	this->c = src.c;
+	this->i = src.i;
+	this->f = src.f;
+	this->d = src.d;
+	this->initial_type = src.initial_type;
 
 
 	return (*this);

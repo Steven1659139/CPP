@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 12:35:41 by slavoie           #+#    #+#             */
-/*   Updated: 2023/03/10 16:47:15 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/03/12 19:47:43 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,18 +26,18 @@ Dog::~Dog()
 	std::cout << "Default Dog destructor call" << std::endl;
 }
 
-Dog::Dog(const Dog &rhs)
+Dog::Dog(const Dog &src)
 {
 	this->brain = new Brain;
-	*this = rhs;
+	*this = src;
 	
 	std::cout << "Copy Dog constructor call" << std::endl;
 }
 
-Dog &Dog::operator=(const Dog &rhs)
+Dog &Dog::operator=(const Dog &src)
 {
-	this->type = rhs.type;
-	*this->brain = *rhs.brain;
+	this->type = src.type;
+	*this->brain = *src.brain;
 	std::cout <<  "Copy Dog assignment operator call" << std::endl;
 	return(*this);
 }

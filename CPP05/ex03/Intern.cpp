@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 09:05:03 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/15 16:28:10 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/03/12 19:47:43 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,17 +19,17 @@ Intern::Intern()
     this->Type_form[2] = "shrubbery creation";
 }
 
-Intern::Intern(const Intern& rhs) 
+Intern::Intern(const Intern& src) 
 {
-    *this = rhs;
+    *this = src;
 }
 
 Intern::~Intern() 
 {}
 
-Intern& Intern::operator=(const Intern& rhs) 
+Intern& Intern::operator=(const Intern& src) 
 {
-    (void) rhs;
+    (void) src;
     return (*this);
 }
 

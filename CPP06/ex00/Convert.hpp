@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 11:26:40 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/20 14:46:53 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/03/12 19:47:43 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ class Converter
 		void convert(std::string input);
 		void display_convertion();
 		Converter();
-		Converter(const Converter &rhs);
+		Converter(const Converter &src);
 		~Converter();
-		Converter &operator=(const Converter &rhs);
+		Converter &operator=(const Converter &src);
 
 	private:
 		std::string initial_type;

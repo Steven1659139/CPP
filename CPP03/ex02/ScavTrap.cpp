@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: stevenlavoie <stevenlavoie@student.42.f    +#+  +:+       +#+        */
+/*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 11:57:14 by slavoie           #+#    #+#             */
-/*   Updated: 2023/03/05 18:19:11 by stevenlavoi      ###   ########.fr       */
+/*   Updated: 2023/03/12 19:47:43 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,19 +32,19 @@ ScavTrap::~ScavTrap()
 	std::cout << "ScavTrap " << this->_name << " destruct" << std::endl;
 }
 
-ScavTrap::ScavTrap(ScavTrap &rhs)
+ScavTrap::ScavTrap(ScavTrap &src)
 {
-	*this = rhs;
+	*this = src;
 	std::cout << this->type << "copy constructor call for "  << this->_name << std::endl;
 }
 
-ScavTrap &ScavTrap::operator=(const ScavTrap &rhs)
+ScavTrap &ScavTrap::operator=(const ScavTrap &src)
 {
-	this->_name = rhs._name;
-	this->type = rhs.type;
-	this->attack_damage = rhs.attack_damage;
-	this->energy_point = rhs.energy_point;
-	this->life_point = rhs.life_point;
+	this->_name = src._name;
+	this->type = src.type;
+	this->attack_damage = src.attack_damage;
+	this->energy_point = src.energy_point;
+	this->life_point = src.life_point;
 	std::cout << this->type << "copy assignment operator called for " << this->_name  << std::endl;
 	return(*this);
 }

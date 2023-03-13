@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 15:14:01 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/13 14:43:41 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/03/12 19:47:43 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ PresidentialPardonForm::PresidentialPardonForm(const std::string &target) : Form
 // 	std::cout << "PresidentialPardonForm constructor call" << std::endl;
 // }
 
-PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm &rhs)
+PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm &src)
 {
-	*this = rhs;
+	*this = src;
 	// std::cout << "PresidentialPardonForm copy constructor call" << std::endl;
 }
 
@@ -33,9 +33,9 @@ PresidentialPardonForm::~PresidentialPardonForm()
 	// std::cout << "PresidentialPardonForm default destructor call" << std::endl;
 }
 
-PresidentialPardonForm &PresidentialPardonForm::operator=(const PresidentialPardonForm &rhs)
+PresidentialPardonForm &PresidentialPardonForm::operator=(const PresidentialPardonForm &src)
 {
-	(void)rhs;
+	(void)src;
 	// std::cout << "PresidentialPardonForm copy assignement call" << std::endl;
 	return(*this);
 }

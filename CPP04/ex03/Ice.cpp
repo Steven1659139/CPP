@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 15:52:01 by slavoie           #+#    #+#             */
-/*   Updated: 2023/03/12 16:16:03 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/03/12 19:47:43 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@ Ice::Ice( Ice const & src ) : AMateria("ice")
     // std::cout << "* Ice: materia is copied *" << std::endl;
 }
 
-Ice&   Ice::operator=( const Ice& rhs ) {
-    if (this != &rhs)
+Ice&   Ice::operator=( const Ice& src ) {
+    if (this != &src)
     {
-        this->_type = rhs._type;
+        this->_type = src._type;
     }
     return *this;
 }

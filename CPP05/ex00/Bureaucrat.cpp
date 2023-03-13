@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 11:37:39 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/09 15:27:02 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/03/12 19:47:43 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ Bureaucrat::Bureaucrat(const std::string &name, int grade)
 		throw Bureaucrat::GradeTooHighException();
 }
 
-Bureaucrat::Bureaucrat(const Bureaucrat &rhs)
+Bureaucrat::Bureaucrat(const Bureaucrat &src)
 {
-	*this = rhs;
+	*this = src;
 	std::cout << "Bureaucrat copy constructor call" << std::endl;
 }
 
@@ -39,10 +39,10 @@ Bureaucrat::~Bureaucrat()
 	std::cout << "Bureaucrat default destructor call" << std::endl;
 }
 
-Bureaucrat &Bureaucrat::operator=(const Bureaucrat &rhs)
+Bureaucrat &Bureaucrat::operator=(const Bureaucrat &src)
 {
-	this->_grade = rhs._grade;
-	this->_name = rhs._name;
+	this->_grade = src._grade;
+	this->_name = src._name;
 	std::cout << "Bureaucrat copy assignement call" << std::endl;
 	return(*this);
 }
@@ -81,8 +81,8 @@ const char *Bureaucrat::GradeTooLowException::what() const throw()
 	return("Grade too low [1-150]");
 }
 
-std::ostream &operator<<(std::ostream &input, Bureaucrat const &rhs)
+std::ostream &operator<<(std::ostream &input, Bureaucrat const &src)
 {
-    input << rhs.getName() << ", bureaucrat grade " << rhs.getGrade();
+    input << src.getName() << ", bureaucrat grade " << src.getGrade();
     return input;
 }

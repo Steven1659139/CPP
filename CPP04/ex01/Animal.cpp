@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 10:59:52 by slavoie           #+#    #+#             */
-/*   Updated: 2023/03/10 16:12:55 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/03/12 19:47:43 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,15 @@ Animal::~Animal()
 	std::cout << "Default Animal destructor call" << std::endl;
 }
 
-Animal::Animal(const Animal &rhs)
+Animal::Animal(const Animal &src)
 {
-	*this = rhs;
+	*this = src;
 	std::cout << "Copy Animal constructor call" << std::endl;
 }
 
-Animal &Animal::operator=(const Animal &rhs)
+Animal &Animal::operator=(const Animal &src)
 {
-	this->type = rhs.type;
+	this->type = src.type;
 	std::cout <<  "Copy Animal assignment operator call" << std::endl;
 	return(*this);
 }

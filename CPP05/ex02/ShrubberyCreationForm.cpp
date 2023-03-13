@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 18:51:29 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/15 08:29:43 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/03/12 19:47:43 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ ShrubberyCreationForm::ShrubberyCreationForm(std::string &target) : Form("Shrubb
 // 	std::cout << "ShrubberyCreationForm constructor call" << std::endl;
 // }
 
-ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &rhs)
+ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &src)
 {
-	*this = rhs;
+	*this = src;
 	// std::cout << "ShrubberyCreationForm copy constructor call" << std::endl;
 }
 
@@ -33,9 +33,9 @@ ShrubberyCreationForm::~ShrubberyCreationForm()
 	// std::cout << "ShrubberyCreationForm default destructor call" << std::endl;
 }
 
-ShrubberyCreationForm &ShrubberyCreationForm::operator=(const ShrubberyCreationForm &rhs)
+ShrubberyCreationForm &ShrubberyCreationForm::operator=(const ShrubberyCreationForm &src)
 {
-	(void)rhs;
+	(void)src;
 	// std::cout << "ShrubberyCreationForm copy assignement call" << std::endl;
 	return(*this);
 }

@@ -11,15 +11,15 @@ WrongAnimal::~WrongAnimal()
 	std::cout << "Default WrongAnimal destructor call" << std::endl;
 }
 
-WrongAnimal::WrongAnimal(const WrongAnimal &rhs)
+WrongAnimal::WrongAnimal(const WrongAnimal &src)
 {
-	*this = rhs;
+	*this = src;
 	std::cout << "Copy WrongAnimal constructor call" << std::endl;
 }
 
-WrongAnimal &WrongAnimal::operator=(const WrongAnimal &rhs)
+WrongAnimal &WrongAnimal::operator=(const WrongAnimal &src)
 {
-	this->type = rhs.type;
+	this->type = src.type;
 	std::cout <<  "Copy WrongAnimal assignment operator call" << std::endl;
 	return(*this);
 }

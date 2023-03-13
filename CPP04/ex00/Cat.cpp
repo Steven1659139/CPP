@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 12:36:19 by slavoie           #+#    #+#             */
-/*   Updated: 2023/03/10 15:03:07 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/03/12 19:47:43 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,15 +23,15 @@ Cat::~Cat()
 	std::cout << "Default Cat destructor call" << std::endl;
 }
 
-Cat::Cat(const Cat &rhs)
+Cat::Cat(const Cat &src)
 {
-	*this = rhs;
+	*this = src;
 	std::cout << "Copy Cat constructor call" << std::endl;
 }
 
-Cat &Cat::operator=(const Cat &rhs)
+Cat &Cat::operator=(const Cat &src)
 {
-	this->type = rhs.type;
+	this->type = src.type;
 	std::cout <<  "Copy Cat assignment operator call" << std::endl;
 	return(*this);
 }

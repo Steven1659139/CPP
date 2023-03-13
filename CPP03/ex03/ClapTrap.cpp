@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 17:25:02 by slavoie           #+#    #+#             */
-/*   Updated: 2023/03/08 12:16:44 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/03/12 19:50:06 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,18 +37,18 @@ ClapTrap::~ClapTrap()
 	std::cout << this->_type << "destructor call for " << this->_name << std::endl;
 }
 
-ClapTrap::ClapTrap(ClapTrap &obj)
+ClapTrap::ClapTrap(ClapTrap &src)
 {
-	*this = obj;
+	*this = src;
 	std::cout << this->_type << "copy constructor call for "  << this->_name << std::endl;
 }
 
-ClapTrap &ClapTrap::operator=(const ClapTrap &rhs)
+ClapTrap &ClapTrap::operator=(const ClapTrap &src)
 {
 	std::cout << this->_type << "copy assignment operator called for " << this->_name  << std::endl;
-	this->attack_damage = rhs.attack_damage;
-	this->energy_point = rhs.energy_point;
-	this->life_point = rhs.life_point;
+	this->attack_damage = src.attack_damage;
+	this->energy_point = src.energy_point;
+	this->life_point = src.life_point;
 	return(*this);
 }
 

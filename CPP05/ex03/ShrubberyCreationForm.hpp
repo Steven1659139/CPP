@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 18:43:32 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/13 13:08:45 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/03/12 19:47:43 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ class ShrubberyCreationForm : public Form
 	public:
 		ShrubberyCreationForm();
 		ShrubberyCreationForm(std::string &target);
-		ShrubberyCreationForm(const ShrubberyCreationForm &rhs);
+		ShrubberyCreationForm(const ShrubberyCreationForm &src);
 		~ShrubberyCreationForm();
-		ShrubberyCreationForm &operator=(const ShrubberyCreationForm &rhs);
+		ShrubberyCreationForm &operator=(const ShrubberyCreationForm &src);
 		void execute(Bureaucrat const & executor) const;
 };

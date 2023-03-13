@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 11:57:26 by slavoie           #+#    #+#             */
-/*   Updated: 2023/03/08 12:16:21 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/03/12 19:47:43 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,18 +33,18 @@ FragTrap::FragTrap(std::string name)
 	std::cout << this->_type << name << " has construct" << std::endl;
 }
 
-FragTrap::FragTrap(FragTrap &rhs)
+FragTrap::FragTrap(FragTrap &src)
 {
-	*this = rhs;
+	*this = src;
 	std::cout << this->_type << "copy constructor call for "  << this->_name << std::endl;
 }
 
-FragTrap &FragTrap::operator=(const FragTrap &rhs)
+FragTrap &FragTrap::operator=(const FragTrap &src)
 {
 	std::cout << this->_type << "copy assignment operator called for " << this->_name  << std::endl;
-	this->attack_damage = rhs.attack_damage;
-	this->energy_point = rhs.energy_point;
-	this->life_point = rhs.life_point;
+	this->attack_damage = src.attack_damage;
+	this->energy_point = src.energy_point;
+	this->life_point = src.life_point;
 	return(*this);
 }
 

@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 11:46:39 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/15 13:13:18 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/03/12 19:47:43 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,9 @@ class Form
 	public:
 		Form();
 		Form(const std::string &name, const int &gradeSign, const int &gradeExec);
-		Form(const Form &rhs);
+		Form(const Form &src);
 		virtual ~Form();
-		Form &operator=(const Form &rhs);
+		Form &operator=(const Form &src);
 		std::string getName() const;
 		bool getSignature() const;
 		int getGradeSign() const;
@@ -62,6 +62,6 @@ class Form
 
 };
 
-std::ostream &operator<<(std::ostream &input, Form const &rhs);
+std::ostream &operator<<(std::ostream &input, Form const &src);
 
 #endif

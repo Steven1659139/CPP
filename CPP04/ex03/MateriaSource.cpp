@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 15:57:53 by slavoie           #+#    #+#             */
-/*   Updated: 2023/03/12 18:56:50 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/03/12 19:50:06 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,14 @@
 MateriaSource::MateriaSource()
 {
     for (int i = 0; i < 4; i++)
-        materias[i] = NULL;
+        _materias[i] = NULL;
 }
 
 MateriaSource::~MateriaSource()
 {
     for (int i = 0; i < 4; i++)
-        if (materias[i])
-            delete materias[i];
+        if (_materias[i])
+            delete _materias[i];
 }
 
 MateriaSource::MateriaSource(MateriaSource const & src)
@@ -30,21 +30,21 @@ MateriaSource::MateriaSource(MateriaSource const & src)
     *this = src;
 }
 
-MateriaSource& MateriaSource::operator=(const MateriaSource& obj)
+MateriaSource& MateriaSource::operator=(const MateriaSource& src)
 {
-	if (this != &obj)
+	if (this != &src)
 	{
 		for (int i = 0; i < 4; i++)
 		{
-			if (this->materias[i] != NULL)
+			if (this->_materias[i] != NULL)
             {
-				delete this->materias[i];
-                this->materias[i] = NULL;
+				delete this->_materias[i];
+                this->_materias[i] = NULL;
             }
-			if (obj.materias[i] != NULL)
-				this->materias[i] = obj.materias[i]->clone();
+			if (src._materias[i] != NULL)
+				this->_materias[i] = src._materias[i]->clone();
 			else
-				this->materias[i] = NULL;
+				this->_materias[i] = NULL;
 		}
 	}
 	return (*this);
@@ -54,9 +54,9 @@ void MateriaSource::printMateria()
 {
     for (int i = 0; i < 4; i++)
     {
-        if (this->materias[i])
-            std::cout << this->materias[i]->getType() << " ";    // type
-            // std::cout << this->materias[i] << " ";               // ptr
+        if (this->_materias[i])
+            std::cout << this->_materias[i]->getType() << " ";    // type
+            // std::cout << this->_materias[i] << " ";               // ptr
         else
             std::cout << NULL << " ";
     }
@@ -66,17 +66,17 @@ void MateriaSource::printMateria()
 AMateria* MateriaSource::getMateria(std::string const & type)
 {
     for (int i = 0; i < 4; i++)
-        if (materias[i] && materias[i]->getType() == type)
-            return materias[i];
+        if (_materias[i] && _materias[i]->getType() == type)
+            return _materias[i];
     return NULL;
 }
 
 void    MateriaSource::learnMateria(AMateria* m)
 {
     for (int i = 0; i < 4; i++)
-        if (materias[i] == NULL)
+        if (_materias[i] == NULL)
         {
-            materias[i] = m;
+            _materias[i] = m;
             // std::cout << "MateriaSource learned " << m->getType() << std::endl;
             return;
         }
@@ -85,8 +85,8 @@ void    MateriaSource::learnMateria(AMateria* m)
 
 AMateria*   MateriaSource::createMateria(std::string const& type)
 {
-    for ( int i = 0; i < 4; i++ )
-        if ( materias[i] && materias[i]->getType() == type )
-            return materias[i]->clone();
+    for (int i = 0; i < 4; i++)
+        if (_materias[i] && _materias[i]->getType() == type)
+            return _materias[i]->clone();
     return NULL;
 }

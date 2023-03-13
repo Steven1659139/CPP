@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 15:57:33 by slavoie           #+#    #+#             */
-/*   Updated: 2023/03/12 18:26:53 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/03/12 19:48:47 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,12 @@ class MateriaSource : public IMateriaSource
         MateriaSource();
         ~MateriaSource();
 
-        MateriaSource( MateriaSource const & );
-        MateriaSource&  operator=( MateriaSource const & );
+        MateriaSource(MateriaSource const &src);
+        MateriaSource&  operator=(MateriaSource const &src);
 
-        AMateria*       getMateria( std::string const & type );
-        AMateria*       createMateria( std::string const & type );
-        void            learnMateria( AMateria* );
+        AMateria*       getMateria(std::string const &type);
+        AMateria*       createMateria(std::string const &type);
+        void            learnMateria(AMateria*);
         void            printMateria();
 };
 

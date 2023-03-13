@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 11:57:14 by slavoie           #+#    #+#             */
-/*   Updated: 2023/03/08 12:16:04 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/03/12 19:47:43 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,18 +34,18 @@ ScavTrap::ScavTrap(std::string name)
 	std::cout << this->_type << name << " has construct" << std::endl;
 }
 
-ScavTrap::ScavTrap(ScavTrap &rhs)
+ScavTrap::ScavTrap(ScavTrap &src)
 {
-	*this = rhs;
+	*this = src;
 	std::cout << this->_type << "copy constructor call for "  << this->_name << std::endl;
 }
 
-ScavTrap &ScavTrap::operator=(const ScavTrap &rhs)
+ScavTrap &ScavTrap::operator=(const ScavTrap &src)
 {
 	std::cout << this->_type << "copy assignment operator called for " << this->_name  << std::endl;
-	this->attack_damage = rhs.attack_damage;
-	this->energy_point = rhs.energy_point;
-	this->life_point = rhs.life_point;
+	this->attack_damage = src.attack_damage;
+	this->energy_point = src.energy_point;
+	this->life_point = src.life_point;
 	return(*this);
 }
 

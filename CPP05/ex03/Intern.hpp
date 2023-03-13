@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 08:45:53 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/15 15:22:23 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/03/12 19:47:43 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ class Intern
 {
 	public:
 		Intern();
-		Intern(const Intern& rhs);
+		Intern(const Intern& src);
 		virtual ~Intern();
 
 		
-		Intern& operator=(const Intern& rhs);
+		Intern& operator=(const Intern& src);
 		static Form* createRobotomyRequestForm(std::string target);
 		static Form* createPresidentialPardonForm(std::string target);
 		static Form* createShrubberyCreationForm(std::string target);

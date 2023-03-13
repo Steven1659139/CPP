@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 13:40:20 by slavoie           #+#    #+#             */
-/*   Updated: 2023/02/13 14:44:46 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/03/12 19:47:43 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ RobotomyRequestForm::RobotomyRequestForm(const std::string &target) : Form("Robo
 // 	std::cout << "RobotomyRequestForm constructor call" << std::endl;
 // }
 
-RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &rhs)
+RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &src)
 {
-	*this = rhs;
+	*this = src;
 	// std::cout << "RobotomyRequestForm copy constructor call" << std::endl;
 }
 
@@ -33,9 +33,9 @@ RobotomyRequestForm::~RobotomyRequestForm()
 	// std::cout << "RobotomyRequestForm default destructor call" << std::endl;
 }
 
-RobotomyRequestForm &RobotomyRequestForm::operator=(const RobotomyRequestForm &rhs)
+RobotomyRequestForm &RobotomyRequestForm::operator=(const RobotomyRequestForm &src)
 {
-	(void)rhs;
+	(void)src;
 	// std::cout << "RobotomyRequestForm copy assignement call" << std::endl;
 	return(*this);
 }

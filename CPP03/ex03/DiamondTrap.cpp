@@ -20,9 +20,9 @@ DiamondTrap::DiamondTrap() : ClapTrap("Default_clap_name")
 	this->attack_damage = FragTrap::DAMAGE;
 }
 
-DiamondTrap::DiamondTrap(DiamondTrap &rhs)
+DiamondTrap::DiamondTrap(DiamondTrap &src)
 {
-	*this = rhs;
+	*this = src;
 	std::cout << "Copy constructor call" << std::endl;
 }
 
@@ -47,14 +47,14 @@ void DiamondTrap::whoAmI()
 	std::cout << "I am a DiamondTrap and my name is " << this->_name << ". My ClapTrap name is " << ClapTrap::_name << std::endl;
 }
 
-DiamondTrap &DiamondTrap::operator=(const DiamondTrap &rhs)
+DiamondTrap &DiamondTrap::operator=(const DiamondTrap &src)
 {
-	this->_name = rhs._name;
+	this->_name = src._name;
 	std::cout << this->_type << "copy assignment operator called for " << this->_name  << std::endl;
-	this->_type = rhs._type;
-	this->attack_damage = rhs.attack_damage;
-	this->energy_point = rhs.energy_point;
-	this->life_point = rhs.life_point;
+	this->_type = src._type;
+	this->attack_damage = src.attack_damage;
+	this->energy_point = src.energy_point;
+	this->life_point = src.life_point;
 	return(*this);
 }
 
