@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 16:53:43 by slavoie           #+#    #+#             */
-/*   Updated: 2023/03/13 11:54:33 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/03/13 15:21:44 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int main()
 	// unequip all
 	// me->unequip(0);
 	// me->unequip(1);
-	std::cout << tmp->getType() << " existe toujours" << std::endl;
+	// std::cout << tmp->getType() << " existe toujours" << std::endl;
 
 	// unequip same
 	// me->unequip(0);
@@ -47,6 +47,7 @@ int main()
 	MateriaSource *src2 = new MateriaSource(*src);
 	src->printMateria();
 	src2->printMateria();
+	*src2 = *src;
 
 	// Character deep copy
 	Character *me2 = new Character(*me);
