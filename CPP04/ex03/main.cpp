@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 16:53:43 by slavoie           #+#    #+#             */
-/*   Updated: 2023/03/13 11:52:40 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/03/13 11:54:33 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int main()
 	Character *me2 = new Character(*me);
 	me->printMateria();
 	me2->printMateria();
-	// me2 = me;
+	*me2 = *me;
 
 	// Materia non valid
 	tmp = src->createMateria("fdsgddfgd");
