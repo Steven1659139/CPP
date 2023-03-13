@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 16:53:43 by slavoie           #+#    #+#             */
-/*   Updated: 2023/03/12 19:21:27 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/03/13 11:52:40 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,11 +52,12 @@ int main()
 	Character *me2 = new Character(*me);
 	me->printMateria();
 	me2->printMateria();
+	// me2 = me;
 
 	// Materia non valid
 	tmp = src->createMateria("fdsgddfgd");
 
-	ICharacter* bob = new Character("bob");
+	Character* bob = new Character("bob");
 
 	me->use(0, *bob);
 	me->use(1, *bob);
@@ -65,7 +66,7 @@ int main()
 	delete me;
 	delete me2;
 	delete src;
-	delete src2;
+	delete src2; 
 	
 
 

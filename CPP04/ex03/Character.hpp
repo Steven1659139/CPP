@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 15:49:01 by slavoie           #+#    #+#             */
-/*   Updated: 2023/03/12 18:34:10 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/03/13 11:45:18 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class Character : public ICharacter
 	public:
 		Character(std::string const &name);
 		Character(Character const &src);
-		~Character();
+		virtual ~Character();
 
 		Character&          operator=(Character const &src);
 

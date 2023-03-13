@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 15:45:15 by slavoie           #+#    #+#             */
-/*   Updated: 2023/03/12 19:47:43 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/03/13 11:37:41 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ Cure::Cure(Cure const & src) : AMateria("cure")
     // std::cout << "* Cure: materia is copied *" << std::endl;
 }
 
-Cure&   Cure::operator=(const Cure& src)
+Cure&   Cure::operator=(const Cure &src)
 {
     if (this != &src)
     {

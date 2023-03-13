@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 16:21:33 by slavoie           #+#    #+#             */
-/*   Updated: 2023/03/12 19:12:40 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/03/13 11:22:42 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ Character::Character(Character const &src) : _name(src._name)
     // std::cout << "Character " << this->_name << " created" << std::endl;
 }
 
-Character& Character::operator=(const Character& src)
+Character& Character::operator=(const Character &src)
 {
 	if (this != &src)
 	{

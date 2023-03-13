@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 15:57:53 by slavoie           #+#    #+#             */
-/*   Updated: 2023/03/12 19:50:06 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/03/13 11:37:02 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,12 @@ MateriaSource::~MateriaSource()
             delete _materias[i];
 }
 
-MateriaSource::MateriaSource(MateriaSource const & src)
+MateriaSource::MateriaSource(MateriaSource const &src)
 {
     *this = src;
 }
 
-MateriaSource& MateriaSource::operator=(const MateriaSource& src)
+MateriaSource& MateriaSource::operator=(const MateriaSource &src)
 {
 	if (this != &src)
 	{
@@ -63,7 +63,7 @@ void MateriaSource::printMateria()
     std::cout << std::endl;
 }
 
-AMateria* MateriaSource::getMateria(std::string const & type)
+AMateria* MateriaSource::getMateria(std::string const &type)
 {
     for (int i = 0; i < 4; i++)
         if (_materias[i] && _materias[i]->getType() == type)
@@ -83,7 +83,7 @@ void    MateriaSource::learnMateria(AMateria* m)
     // std::cout << "MateriaSource can't learn " << m->getType() << std::endl;
 }
 
-AMateria*   MateriaSource::createMateria(std::string const& type)
+AMateria*   MateriaSource::createMateria(std::string const &type)
 {
     for (int i = 0; i < 4; i++)
         if (_materias[i] && _materias[i]->getType() == type)
