@@ -2,9 +2,9 @@ NAME = AAnimal
 
 CPPFLAGS = -std=c++98 -Wall -Werror -Wextra
 CC = c++
-SRCS =  main.cpp AAnimal.cpp Cat.cpp Dog.cpp 
+SRCS =  main.cpp AAnimal.cpp Cat.cpp Dog.cpp Brain.cpp
 
-INC = AAnimal.hpp
+INC = AAnimal.hpp Brain.hpp
 
 OBJS = $(SRCS:.cpp=.o)
 

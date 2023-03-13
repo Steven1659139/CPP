@@ -1,6 +1,6 @@
 NAME = Materia
 
-CPPFLAGS = -std=c++98 -Wall -Werror -Wextra -g
+CPPFLAGS = -std=c++98 -Wall -Werror -Wextra
 CC = c++
 SRCS =  main.cpp AMateria.cpp Character.cpp Cure.cpp Ice.cpp MateriaSource.cpp
 
