@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 15:57:33 by slavoie           #+#    #+#             */
-/*   Updated: 2023/03/12 19:48:47 by slavoie          ###   ########.fr       */
+/*   Updated: 2023/03/12 20:02:47 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 class MateriaSource : public IMateriaSource
 {
     private:
-        AMateria*       materias[4];
+        AMateria*       _materias[4];
 
     public:
         MateriaSource();
